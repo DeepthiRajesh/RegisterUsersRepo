@@ -1,22 +1,40 @@
 1. Remove lines 37 - 41. RegisteredUsers.Presentation.UI.csproj
 
-By default .net core considers all folders that has class files (.cs) as part of project and considers empty folders as not part of project. These lines are added when you want to include empty folders as part of a project. This was automatically added by visual studio when you added those folders first time, but are unnecessary.
+By default .net core considers all folders that has class files (.cs) as part of project and considers empty folders as not part of project. 
+These lines are added when you want to include empty folders as part of a project. This was automatically added by visual studio when you 
+added those folders first time, but are unnecessary.
 
 2. Create folder "pages" [ ClientApp/src/app/pages ]. Move everything inside "components" to pages. 
 
-I see you created separate folders and components for admins and users. Let's assume our app is accessible to admin users only, so this is no t required. As of now just move the files and keep them in pages folder.
+I see you created separate folders and components for admins and users. Let's assume our app is accessible to admin users only, 
+so this is no t required. As of now just move the files and keep them in pages folder.
 
 3. Move nav-menu from "shared" to "pages" itself.
 
 4. Create component "user-tile" in components folder. We will use this later. You can run the following command.
 ng generate component component/user-tile
 
-5. Remove all bootstrap classes from nav-menu component's template.
+5. Remove all bootstrap classes and unnecessary divs from nav-menu component's template.
 
 6. Delete all .spec.ts files. These are for writing unit tests. We won't be doing that.
 
 7. Lines 60 - 68 in nav-menu.component.css. You are setting css rules for html tag. Move these lines to the global stylesheet styles.css.
+
+8. Id of an element must be unique throughout the entire document. There are places where same id is given to multiple elements.
+id="1" id="2". Make them unique.
+
+9. The way header is created is not quite right. If you refer to image 1, you can see the right end of the div overlapping "my frontiers",
+office dropdown and profile picture. Also that div appears like it is vertically centered because padding-top: 13px has been set to it.
+This may not work in all screens and its required to set it vertically centered properly as shown in image 2. Use flex-box for this,
+by setting display: flex;. Read this article for more info. 
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
+
 =========================
 Difference between an angular component that is a "page" and "component" and why they must be kept separate.
 
-For angular, there is no difference. For us humans, there is. The term "component" refers to a small portion of our website that is reused. For e.g, the tile of each user in the left side of registered users tab. As you can see this tile is repeatedly rendered for each user, forming a list. The only thing that is different from any 2 tiles is the data they contain, like first name, last name. The angular components you currently have in your "components" folder are "nav-menu", "dashboard" etc.. These things are not rendered repeatedly in your application, but only once. In other words, its better to call them "pages" or "views", and not a "component". You will further understand this difference when we create and use a user-tile component.
+For angular, there is no difference. For us humans, there is. The term "component" refers to a small portion of our website that is reused.
+For e.g, the tile of each user in the left side of registered users tab. As you can see this tile is repeatedly rendered for each user,
+forming a list. The only thing that is different from any 2 tiles is the data they contain, like first name, last name. The angular components
+you currently have in your "components" folder are "nav-menu", "dashboard" etc.. These things are not rendered repeatedly in your application,
+but only once. In other words, its better to call them "pages" or "views", and not a "component". You will further understand this difference
+when we create and use a user-tile component.
