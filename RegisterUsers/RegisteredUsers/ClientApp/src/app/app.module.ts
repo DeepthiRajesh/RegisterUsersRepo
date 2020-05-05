@@ -9,7 +9,7 @@ import { LoginComponent } from './component/shared/login/login.component';
 import { RegistrationComponent } from './component/shared/registration/registration.component';
 import { NavMenuComponent } from './component/shared/nav-menu/nav-menu.component';
 import { HomeComponent } from './component/user/home/home.component';
-import { UserDashboardComponent } from './component/shared/user-dashboard/user-dashboard.component';
+import { UserDashboardComponent } from './component/user-dashboard/user-dashboard.component';
 
 
 
@@ -32,7 +32,7 @@ import { UserDashboardComponent } from './component/shared/user-dashboard/user-d
             { path: 'registration', component: RegistrationComponent },
             { path: 'login', component: LoginComponent },
             { path: 'dashboard', component: DashboardComponent },
-            { path: 'userDashbord', component: UserDashboardComponent },
+            { path: 'userDashboard', component: UserDashboardComponent },
         ])
     ],
     providers: [],

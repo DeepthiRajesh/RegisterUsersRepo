@@ -2,14 +2,22 @@ a.navbar-brand {
   white-space: normal;
   text-align: center;
   word-break: break-all;
-  color:azure;
+  font-size: small;
 }
-.nav-item{
-  color:azure;
+
+img {
+  max-height: 40px;
 }
+
+.nav-item {
+  color: black;
+  color: black;
+}
+
 html {
   font-size: 14px;
 }
+
 @media (min-width: 768px) {
   html {
     font-size: 16px;
@@ -18,4 +26,42 @@ html {
 
 .box-shadow {
   box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+.form-control {
+  border: none;
+  font-size: small;
+  outline: none;
+  box-shadow: none;
+  outline: none;
+}
+.form-control-file {
+  border: none;
+  font-size: small;
+  outline: none;
+  box-shadow: none;
+  outline: none;
+  width:60px;
+}
+.navbar-nav {
+  list-style: none;
+  margin: 10px;
+  float: right;
+}
+
+
+
+
+option:hover {
+  background: red;
+  cursor: pointer;
+}
+
+#select_taxonomy option:focus,
+#select_taxonomy option:hover {
+  background-color: gray !important;
+}
+
+#select_taxonomy option:focus {
+  outline: none;
 }
