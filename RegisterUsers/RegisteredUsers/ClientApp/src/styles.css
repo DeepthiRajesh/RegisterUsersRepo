@@ -14,8 +14,9 @@ code {
   background-color: #1b6ec2;
   border-color: #1861ac;
 }
-body{
- margin:0;
+body {
+  font-family: 'Times New Roman', Times, serif;
+  margin: 0px;
 }
 /*body {
   background-image: url("assets/images/registers.jpg");
