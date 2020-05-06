@@ -4,12 +4,12 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
-import { DashboardComponent } from './component/admin/dashboard/dashboard.component';
-import { LoginComponent } from './component/shared/login/login.component';
-import { RegistrationComponent } from './component/shared/registration/registration.component';
-import { NavMenuComponent } from './component/shared/nav-menu/nav-menu.component';
-import { HomeComponent } from './component/user/home/home.component';
-import { UserDashboardComponent } from './component/user-dashboard/user-dashboard.component';
+import { DashboardComponent } from './pages/admin/dashboard/dashboard.component';
+import { LoginComponent } from './pages/shared/login/login.component';
+import { RegistrationComponent } from './pages/shared/registration/registration.component';
+import { NavMenuComponent } from './pages/nav-menu/nav-menu.component';
+import { HomeComponent } from './pages/user/home/home.component';
+import { UserDashboardComponent } from './pages/user-dashboard/user-dashboard.component';
 
 
 

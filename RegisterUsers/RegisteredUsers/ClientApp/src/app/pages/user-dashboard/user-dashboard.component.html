@@ -1,0 +1,49 @@
+
+<div class="main-container">
+  <div class="border-filter">
+    <span class="filter">Filter by</span>
+    <br>
+    <select class="form-control">
+      <option value="0">All users</option>
+      <option value="1">Reviewers</option>
+      <option value="2">Manuscript authors</option>
+      <option value="3">Deactivated accounts</option>
+      <option value="4">Non-activated accounts</option>
+      <option value="5">Authors with Manuscript(s)  in review</option>
+    </select>
+  </div>
+  <div class="border-order">
+    <span class="order">Order by</span>
+    <br>
+
+    <select class="form-control">
+      <option value="0">Alphabetical (Last Name)</option>
+      <option value="1">Oldest registration</option>
+      <option value="2" selected="selected">Newest registration</option>
+    </select>
+
+    <button class=" btn ">
+      <span>Clear filters</span>
+    </button>
+
+  </div>
+</div>
+<div class="main-field">
+  <div class="search-field">
+    <form role="form">
+      <input type="text" autocomplete="off" name="query" class="search-field" id="search" placeholder="Search by name, user id or email address" value="">
+      <!--<button type="submit" class="btn-search" id="search-box-button">
+        <i class="fa fa-search"></i>
+      </button>-->
+    </form>
+  </div><br />
+  <div class="search-results">
+    <div class="users-found">1-10 of 568,361 user(s) found</div>
+    <div class="select-all"><div class="pick"></div></div>
+  </div>
+
+  <div id="registereduserSearchErrorMessage">
+    <p>No records found.</p>
+  </div>
+</div>
+
