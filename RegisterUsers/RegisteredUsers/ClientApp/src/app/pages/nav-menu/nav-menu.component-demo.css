@@ -1,0 +1,29 @@
+.flex {
+  display: flex
+}
+
+  .flex.space-between {
+    justify-content: space-between;
+  }
+
+.tabs-container > li {
+  display: inline-block;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+img.nav-height {
+  height: 40px;
+}
+
+.nav-height {
+  height: 50px;
+}
+
+select.more {
+  width: 70px;
+}
+
+.no-border {
+  border: none;
+}
