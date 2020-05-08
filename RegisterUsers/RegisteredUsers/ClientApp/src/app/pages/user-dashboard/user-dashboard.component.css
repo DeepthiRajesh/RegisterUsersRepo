@@ -1,4 +1,6 @@
-.main-container {
+/*search*/
+
+.main-container { 
   display: flex;
   background-color: white;
   width: inherit;
@@ -6,23 +8,43 @@
   border: 1px solid #e0dddc;
   margin: 20px;
 }
+
+span.order {
+  color: dimgray;
+}
+
+span.filter {
+  color: dimgray;
+}
+
 .form-control {
-  padding: 7px;
-  padding: 2px 0 0;
+  padding: 4px 7px 5px;
   margin: 0 26px 0 0;
 }
+
 .border-order {
   margin: 0 0 3px;
   padding: 12px 5px 0 0;
 }
+
 .border-filter {
   margin: 0 0 3px;
   padding: 12px 5px 0 0;
 }
-.btn{
+
+.filter-btn {
   border-radius: 14px;
   padding: 6px 12px;
+  border: none;
+  color: white;
+  background-color: darkgrey;
+  cursor: pointer;
 }
+
+  .filter-btn:hover {
+    background-color: #d54449;
+  }
+
 .select-all {
   width: 13px;
   height: 13px;
@@ -30,6 +52,7 @@
   top: 67px;
   left: 16px;
 }
+
 .main-field {
   background: #fff;
   border: 1px solid #e0dddc;
@@ -39,11 +62,10 @@
   margin-right: 873px;
 }
 
-input#search {
-  padding: 8px 0px 4px 27px;
-  border-radius: 12px;
-}
-.search-field input[type="text"] {
+.search-field {
+  box-sizing: border-box;
+  display: block;
+  cursor: auto !important;
   border: none;
   box-shadow: 0 1px 5px rgba(0,0,0,0.3) inset, 0 -1px 0 rgba(0,0,0,0.03) inset;
   font-size: 17px;
@@ -51,7 +73,165 @@ input#search {
   width: 100%;
   font-weight: 500;
   letter-spacing: 0px;
-  position: relative;
-  top: 1px;
+  border-radius: 12px;
 }
 
+.search-field.search-area {
+  padding: 8px 24px 4px 0px;
+  text-align: center;
+  }
+
+.btn-search {
+  color: dimgray;
+  border: none;
+  background-color: transparent;
+  font-size: 15px;
+  text-decoration: none;
+  cursor: pointer;
+  display: flex;
+  margin-left: 346px;
+  margin-top: -24px;
+}
+
+span.txt-color {
+  color: dimgray;
+}
+
+.btn-search:hover {
+  color: #d54449;
+}
+.search-results {
+  margin: 0px 0px 0px -15px;
+}
+.users-found:hover {
+  color: #d54449;
+}
+/*view Card*/
+.container-select {
+  display: flex;
+  background-color: white;
+  width: inherit;
+  padding: 12px 29px 20px;
+  border: 1px solid #e0dddc;
+  margin: -1px 873px -12px 20px;
+}
+.container-select:hover{
+  background-color:lightgray;
+}
+img {
+  vertical-align: middle;
+  border: 0;
+  }
+
+img.profile-img {
+  max-height: 59px;
+  margin: 21px 17px -2px 15px;
+  border-radius: 2px;
+}
+
+.pull-right {
+  float: right;
+  font-size: small;
+  color: dimgray;
+}
+
+.teaser-article-type {
+  margin: 0 0 0 -4px;
+}
+
+h3.teaser-title {
+  padding: 0px 0px 0px 66px;
+  margin: -57px 5px -14px 29px;
+  font-size: large;
+}
+
+a.btn-profile {
+  float: right;
+  text-decoration: none;
+  color: #d54449;
+}
+
+p.teaser-authors {
+  margin: 20px 4px 2px 17px;
+  color: dimgrey;
+}
+
+.review-info {
+  padding: 2px 0px 0px 18px;
+  color: dimgrey;
+  margin: -4px 11px 0px 1px;
+}
+
+a.teaser-title {
+  text-decoration: none;
+  color: black;
+}
+
+  a.teaser-title:hover {
+    color: #d54449;
+  }
+  /*profile area*/
+. profile-card{
+  width:50%;
+}
+.profile-area {
+  display: flex;
+  background-color: white;
+  width: inherit;
+  padding: 0px 22px 9px 6px;
+  border: 1px solid #e0dddc;
+  margin: -2184px 20px 0px 475px;
+  background-color: lightgray;
+}
+.button-area {
+  float: right;
+  margin: 11px 0px 0px 12px;
+}
+
+.user-id {
+  font-size: small;
+  margin: 19px 10px 0 11px;
+  color: dimgrey;
+}
+
+.dropdown-menu {
+  margin: 7px 183px 0 254px;
+}
+
+.form-control-item {
+  border-radius: 23px;
+  padding: 8px 0px 7px 4px;
+  width: 103px;
+  margin: 4px 20px 0px -22px;
+  color: white;
+  background-color: #d54449;
+  border:none;
+  cursor:pointer;
+}
+.form-control-item:hover{
+  background-color:indigo;
+}
+
+button.btn-nav-prev {
+  padding: 6px 8px 4px 8px;
+  border-radius: 16px;
+  margin: 0px 4px 0px 1px;
+  background-color: #fff;
+  color: #d54449;
+  border: none;
+  cursor: pointer;
+}
+
+button.btn-nav-next {
+  padding: 6px 8px 4px 8px;
+  border-radius: 16px;
+  margin: 0px 4px 0px 1px;
+  background-color: #fff;
+  color: #d54449;
+  border: none;
+  cursor: pointer;
+}
+.option-color{
+  background-color:white;
+  color:dimgrey;
+}

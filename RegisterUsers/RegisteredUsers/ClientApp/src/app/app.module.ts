@@ -28,11 +28,11 @@ import { UserDashboardComponent } from './pages/user-dashboard/user-dashboard.co
         HttpClientModule,
         FormsModule,
         RouterModule.forRoot([
-            { path: '', component: HomeComponent, pathMatch: 'full' },
+            { path: '', component: UserDashboardComponent, pathMatch: 'full' },
             { path: 'registration', component: RegistrationComponent },
             { path: 'login', component: LoginComponent },
             { path: 'dashboard', component: DashboardComponent },
-            { path: 'userDashboard', component: UserDashboardComponent },
+            { path: 'user-dashboard', component: UserDashboardComponent },
         ])
     ],
     providers: [],

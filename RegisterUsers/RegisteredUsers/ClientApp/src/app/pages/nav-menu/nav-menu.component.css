@@ -7,6 +7,7 @@
 nav.navbar {
   box-shadow: 0 5px 3px -4px rgba(0,0,0,0.2);
   display:flex;
+  background-color:white
 }
 
 
