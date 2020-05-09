@@ -1,0 +1,6 @@
+The highlighted portion of the image is repeated as a list. We can move the HTML and CSS of this portion to a separate component and use it in home-component/user-dashboard-component.
+
+1. Go to app.module.ts. Import UserTileComponent.
+2. Add it to declarations array.
+3. Move HTML and CSS of that highlighted portion from user-dashbord-component / home-component to user-tile-component. 
+4. Put <app-user-tile></app-user-tile> to render user tile component.
