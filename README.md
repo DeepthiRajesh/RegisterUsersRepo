@@ -1,3 +1,3 @@
 # RegisterUsersRepo
 
-added view card to the project 
+Register user page almost completed.
