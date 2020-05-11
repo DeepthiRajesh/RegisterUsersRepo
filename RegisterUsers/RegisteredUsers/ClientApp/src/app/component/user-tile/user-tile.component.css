@@ -1,0 +1,65 @@
+.container-select {
+  display: flex;
+  background-color: white;
+  width: inherit;
+  padding: 12px 29px 20px;
+  border: 1px solid #e0dddc;
+  margin: -1px 873px -12px 20px;
+}
+
+  .container-select:hover {
+    background-color: lightgray;
+  }
+
+img {
+  vertical-align: middle;
+  border: 0;
+}
+
+  img.profile-img {
+    max-height: 59px;
+    margin: 21px 17px -2px 15px;
+    border-radius: 2px;
+  }
+
+.pull-right {
+  float: right;
+  font-size: small;
+  color: dimgray;
+}
+
+.teaser-article-type {
+  margin: 0 0 0 -4px;
+}
+
+h3.teaser-title {
+  padding: 0px 0px 0px 66px;
+  margin: -57px 5px -14px 29px;
+  font-size: large;
+}
+
+a.btn-profile {
+  float: right;
+  text-decoration: none;
+  color: #d54449;
+}
+
+p.teaser-authors {
+  margin: 20px 4px 2px 17px;
+  color: dimgrey;
+}
+
+.review-info {
+  padding: 2px 0px 0px 18px;
+  color: dimgrey;
+  margin: -4px 11px 0px 1px;
+}
+
+a.teaser-title {
+  text-decoration: none;
+  color: black;
+}
+
+  a.teaser-title:hover {
+    color: #d54449;
+  }

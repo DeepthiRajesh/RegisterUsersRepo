@@ -1,12 +1,12 @@
 /*search*/
 
-.main-container { 
+.main-container {
   display: flex;
   background-color: white;
   width: inherit;
   padding: 12px 44px 20px;
   border: 1px solid #e0dddc;
-  margin: 20px;
+  margin: 38px 21px 20px 20px;
 }
 
 span.order {
@@ -67,7 +67,7 @@ span.filter {
   display: block;
   cursor: auto !important;
   border: none;
-  box-shadow: 0 1px 5px rgba(0,0,0,0.3) inset, 0 -1px 0 rgba(0,0,0,0.03) inset;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.3) inset, 0 -1px 0 rgba(0,0,0,0.03) ;
   font-size: 17px;
   color: grey;
   width: 100%;
@@ -106,82 +106,25 @@ span.txt-color {
 .users-found:hover {
   color: #d54449;
 }
-/*view Card*/
-.container-select {
-  display: flex;
-  background-color: white;
-  width: inherit;
-  padding: 12px 29px 20px;
-  border: 1px solid #e0dddc;
-  margin: -1px 873px -12px 20px;
-}
-.container-select:hover{
-  background-color:lightgray;
-}
-img {
-  vertical-align: middle;
-  border: 0;
-  }
-
-img.profile-img {
-  max-height: 59px;
-  margin: 21px 17px -2px 15px;
-  border-radius: 2px;
-}
-
-.pull-right {
-  float: right;
-  font-size: small;
-  color: dimgray;
-}
-
-.teaser-article-type {
-  margin: 0 0 0 -4px;
-}
-
-h3.teaser-title {
-  padding: 0px 0px 0px 66px;
-  margin: -57px 5px -14px 29px;
-  font-size: large;
-}
-
-a.btn-profile {
-  float: right;
-  text-decoration: none;
-  color: #d54449;
-}
-
-p.teaser-authors {
-  margin: 20px 4px 2px 17px;
-  color: dimgrey;
-}
-
-.review-info {
-  padding: 2px 0px 0px 18px;
-  color: dimgrey;
-  margin: -4px 11px 0px 1px;
-}
-
-a.teaser-title {
-  text-decoration: none;
-  color: black;
-}
-
-  a.teaser-title:hover {
-    color: #d54449;
-  }
-  /*profile area*/
-. profile-card{
-  width:50%;
-}
-.profile-area {
-  display: flex;
+ /*profile*/
+.profile-card {
   background-color: white;
   width: inherit;
   padding: 0px 22px 9px 6px;
   border: 1px solid #e0dddc;
-  margin: -2184px 20px 0px 475px;
-  background-color: lightgray;
+  margin: -2183px 21px 0px 475px;
+  background-color: #e2e0e0;
+}
+
+.profile-area {
+  display: flex;
+  background-color: white;
+  width: inherit;
+  padding: 4px 0px 0px 13px;
+  border: 1px solid #dedcdb;
+  margin: 0px -22px 0 -6px;
+  background-color: #e2e0e0;
+  border-bottom-color: white;
 }
 .button-area {
   float: right;
@@ -195,7 +138,7 @@ a.teaser-title {
 }
 
 .dropdown-menu {
-  margin: 7px 183px 0 254px;
+  margin: 7px 195px 7px 247px;
 }
 
 .form-control-item {
@@ -234,4 +177,86 @@ button.btn-nav-next {
 .option-color{
   background-color:white;
   color:dimgrey;
+}
+/*profile card*/
+
+
+/*final part*/
+.form-control-footer {
+  padding: 11px 31px 7px;
+  margin: -8px 21px 25px 24px;
+  background-color: #ded9d9;
+  cursor:pointer;
+}
+
+
+.filter-btn-footer {
+  border-radius: 14px;
+  padding: 7px 18px;
+  border: none;
+  color: white;
+  background-color: darkgrey;
+  cursor: pointer;
+  margin: -3px -6px 27px -2px;
+}
+
+  .filter-btn-footer:hover {
+    background-color: #d54449;
+  }
+
+.footer-area {
+  display: flex;
+  margin: 39px -24px 2px -8px;
+  border-top: 1px solid white;
+  padding: 30px 0px 0px 0px;
+}
+.footer-options{
+  background-color: white;
+}
+.manuscript-header{
+  background-color:#fff;
+}
+
+.history-footor {
+  background-color: #f7f4f4;
+  margin: 27px 49px 945px 53px;
+  box-shadow: 0 5px 29px 9px rgba(0,0,0,0.2)
+}
+
+h2.status-bar {
+  color: #adaaaa;
+  margin: 16px 0 0px 46px;
+}
+
+h4.text-nowrap {
+  text-decoration: none;
+  color: #313131;
+  font-weight: 200;
+  margin: 0px 0px 15px 41px;
+  padding: 27px 0 11px 6px;
+}
+
+a.footer-area-right {
+  text-decoration: none;
+  float: right;
+  margin: -45px 33px 1px 0;
+  color: #d42d2d;
+}
+a.footer-area-right:hover{
+  color:black;
+}
+.manuscript-body {
+  margin: 0px 0 1px 47px;
+  font-size: 13px;
+}
+mark.highlight {
+  background-color: white;
+}
+
+a.dotted.readmore {
+  text-decoration:underline;
+  color: lightgrey;
+}
+p.view-field {
+  padding: 0 0 15px 0px;
 }

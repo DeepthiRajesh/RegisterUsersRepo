@@ -1,0 +1,97 @@
+.profile-header {
+  background-color: white;
+  padding: 0px 0px 44px 0px;
+}
+
+.profile-card-area {
+  margin: 40px 30px 0px 45px;
+  box-shadow: 0 5px 29px 9px rgba(0,0,0,0.2);
+  background-color: white;
+}
+
+.profile-footer {
+  background-color: #f7f6f6;
+}
+
+.profile-body {
+  padding: 23px 0px 14px 4px;
+  background-color: white;
+  margin: -26px 49px -16px 46px;
+  font-size: 13px;
+  color: #bfbaba;
+  border-top: 1px solid #cec8c8;
+}
+
+h2.media-heading {
+  margin: -206px 0px 94px 240px;
+  font-size: xx-large;
+}
+
+img.profile-area-image {
+  margin: 56px;
+  cursor: pointer;
+}
+
+a.font-color {
+  color: black;
+  text-decoration: none;
+}
+
+  a.font-color:hover {
+    color: #d54449;
+  }
+
+p.lead {
+  margin: -77px 0 0px 248px;
+  font-size: 23px;
+  color: dimgray;
+}
+
+a.email-style {
+  text-decoration: none;
+  color: #757575;
+  margin: 0 0 0 248px;
+}
+
+strong.role {
+  color: dimgray;
+}
+/*01*/
+span.nowrap {
+  margin: 0 33px 0 -11px;
+  padding: 0 12px 0 11px;
+  color: dimgray;
+}
+
+.row1 {
+  display: inline-block;
+  margin: 10px -15px 6px -17px;
+}
+
+.row.editor-numbers {
+  margin: -15px 0px 22px 52px;
+  display: inline-flex;
+}
+
+span.number-label {
+  font-size: 15px;
+}
+
+span.tot-number {
+  font-size: 28px;
+  margin: 0 9px 0px 1px;
+}
+
+strong.number.inverse {
+  border-radius: 50%;
+  padding: 0px 7px 0px 9px;
+  background: #fff;
+  text-align: center;
+}
+
+strong.number.bg-cyan {
+  border-radius: 50%;
+  padding: 0px 7px 0px 9px;
+  background: #81c7c7;
+  text-align: center;
+}

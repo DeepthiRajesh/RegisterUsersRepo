@@ -10,7 +10,8 @@ import { RegistrationComponent } from './pages/shared/registration/registration.
 import { NavMenuComponent } from './pages/nav-menu/nav-menu.component';
 import { HomeComponent } from './pages/user/home/home.component';
 import { UserDashboardComponent } from './pages/user-dashboard/user-dashboard.component';
-
+import { UserTileComponent } from './component/user-tile/user-tile.component';
+import { ProfileTileComponent } from './component/profile-tile/profile-tile.component';
 
 
 @NgModule({
@@ -21,7 +22,9 @@ import { UserDashboardComponent } from './pages/user-dashboard/user-dashboard.co
         RegistrationComponent,
         LoginComponent,
         DashboardComponent,
-        UserDashboardComponent
+        UserDashboardComponent,
+        UserTileComponent,
+        ProfileTileComponent
     ],
     imports: [
         BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -33,6 +36,8 @@ import { UserDashboardComponent } from './pages/user-dashboard/user-dashboard.co
             { path: 'login', component: LoginComponent },
             { path: 'dashboard', component: DashboardComponent },
             { path: 'user-dashboard', component: UserDashboardComponent },
+            { path: 'user-tile', component: UserTileComponent },
+            { path: 'profile-tile',component: ProfileTileComponent }
         ])
     ],
     providers: [],

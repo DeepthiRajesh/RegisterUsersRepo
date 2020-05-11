@@ -35,6 +35,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\src\app\component\profile-tile\profile-tile.component.spec.ts" />
     <None Remove="ClientApp\src\app\pages\user\home\StyleSheet.css" />
   </ItemGroup>
 
