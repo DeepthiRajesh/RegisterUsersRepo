@@ -112,72 +112,10 @@ span.txt-color {
   width: inherit;
   padding: 0px 22px 9px 6px;
   border: 1px solid #e0dddc;
-  margin: -2183px 21px 0px 475px;
+  margin: -2164px 21px 0px 475px;
   background-color: #e2e0e0;
 }
 
-.profile-area {
-  display: flex;
-  background-color: white;
-  width: inherit;
-  padding: 4px 0px 0px 13px;
-  border: 1px solid #dedcdb;
-  margin: 0px -22px 0 -6px;
-  background-color: #e2e0e0;
-  border-bottom-color: white;
-}
-.button-area {
-  float: right;
-  margin: 11px 0px 0px 12px;
-}
-
-.user-id {
-  font-size: small;
-  margin: 19px 10px 0 11px;
-  color: dimgrey;
-}
-
-.dropdown-menu {
-  margin: 7px 195px 7px 247px;
-}
-
-.form-control-item {
-  border-radius: 23px;
-  padding: 8px 0px 7px 4px;
-  width: 103px;
-  margin: 4px 20px 0px -22px;
-  color: white;
-  background-color: #d54449;
-  border:none;
-  cursor:pointer;
-}
-.form-control-item:hover{
-  background-color:indigo;
-}
-
-button.btn-nav-prev {
-  padding: 6px 8px 4px 8px;
-  border-radius: 16px;
-  margin: 0px 4px 0px 1px;
-  background-color: #fff;
-  color: #d54449;
-  border: none;
-  cursor: pointer;
-}
-
-button.btn-nav-next {
-  padding: 6px 8px 4px 8px;
-  border-radius: 16px;
-  margin: 0px 4px 0px 1px;
-  background-color: #fff;
-  color: #d54449;
-  border: none;
-  cursor: pointer;
-}
-.option-color{
-  background-color:white;
-  color:dimgrey;
-}
 /*profile card*/
 
 

@@ -1,9 +1,9 @@
 <div class="container-select">
   <div class="paper">
     <div class="teaser-article-type ">
-      <input type="checkbox" class="users-found" />  Author
+      <input type="checkbox" class="users-found" />  {{userTile.articleType}}
       <div class="pull-right">
-        <span class="teaser-date">Registration date<br>28/04/2020</span>
+        <span class="teaser-date">Registration date<br>{{userTile.registrationDate}}</span>
       </div>
     </div>
     <a href="#">
@@ -11,20 +11,20 @@
     </a>
     <h3 class="teaser-title">
       <a href="#" class="teaser-title">
-        Automation First Name Automation Middle Name Automation Last Name
+        {{userTile.firstName}}<br /> {{userTile.middleName}} <br />{{userTile.lastName}}
       </a>
     </h3>
     <p class="teaser-authors">
 
-      TES International (United States)<br>
+      {{userTile.author}}<br>
 
     </p>
     <div class="review-info">
       <div class="row">
         <div class="col-xs-12">
-          <strong>0 </strong>editing assignments
-          <strong>0 </strong>review assignments
-          <strong>1 </strong>submission
+          <strong>{{userTile.editingAssignments}} </strong>editing assignments
+          <strong>{{userTile.reviewAssignments}}</strong>review assignments
+          <strong>{{userTile.submission}}</strong>submission
         </div>
       </div>
     </div>

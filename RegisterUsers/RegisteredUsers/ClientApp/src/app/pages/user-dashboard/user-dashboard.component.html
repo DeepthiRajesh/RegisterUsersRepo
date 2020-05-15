@@ -50,41 +50,17 @@
 
   </div>
   <!--usertile area-->
-  <app-user-tile></app-user-tile>
+  <app-user-tile  [userTile]="userTileData"></app-user-tile>
 </div>
 
 
 <!--profile area-->
 
 <div class=" profile-card">
-  <div class="profile-area">
-    <div class="user-id">
-      <span class="user-id">USER ID: 1143191</span>
-    </div>
-
-    <div class="dropdown-menu">
-      <select class="form-control-item" id="select_taxonomy">
-        <option value="deo" class="option-color" id="1" disabled selected hidden>User Actions</option>
-        <option value="deo" class="option-color" id="2" href="#">Compose message to User</option>
-        <option value="nessie" class="option-color" id="3" href="#">View Activity</option>
-        <option value="controlroom" class="option-color" id="4" href="#">Enter Account</option>
-        <option value="nessie" id="3" class="option-color" href="#">View Comment</option>
-        <option value="controlroom" class="option-color" id="4" href="#">Deactivate Account</option>
-      </select>
-
-    </div>
-    <div class="button-area">
-      <button href="#" class=" btn-nav-prev">
-        <i class="fa fa-chevron-left"></i>Prev.
-      </button>
-      <button href="#" class=" btn-nav-next">
-        Next<i class=" fa fa-chevron-right"></i>
-      </button>
-    </div>
-  </div>
+ 
 
 
-  <app-profile-tile></app-profile-tile>
+  <app-profile-tile  [userTile]="userTileData" [profileTile]="profileTileData"></app-profile-tile>
   <!--rest-->
 
   <div class="assignments-filters top-boxed">

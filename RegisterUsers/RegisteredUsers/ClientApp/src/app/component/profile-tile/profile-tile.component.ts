@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { ProfileTile } from '../../models/user/profile-tile';
+import { UserTile } from '../../models/user/user-tile';
 
 @Component({
   selector: 'app-profile-tile',
@@ -6,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./profile-tile.component.css']
 })
 export class ProfileTileComponent implements OnInit {
-
+    @Input() userTile = new UserTile();
+    @Input() profileTile = new ProfileTile(); 
   constructor() { }
 
   ngOnInit() {
