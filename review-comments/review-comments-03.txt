@@ -9,7 +9,8 @@ ALL IMAGES IN ./review-comments/images FOLDER
 
 4. Remove project RegisteredUsers.Presentation.API.csproj. We wont be using that. Delete API folder.
 
-5. Move UI project to Presentation folder and delete UI folder.
+5. Move UI project to Presentation folder and delete UI folder. 
+   Also keep move program.cs and startup.cs to root and delete "Startup" folder.
 
 6. You are still using using "padding-top: 13px" to vertically center contents of nav.
    (green area in image 1 only exists in top, not bottom. this means it is not vertically centered,
