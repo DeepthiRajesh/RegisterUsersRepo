@@ -1,0 +1,35 @@
+ALL IMAGES IN ./review-comments/images FOLDER
+---------------------------------------------
+
+1. You are not using home component. Delete that.
+
+2. Rename user-dashboard-component to user-component.
+
+3. Order by drop down breaks away. Fix that.
+
+4. Remove project RegisteredUsers.Presentation.API.csproj. We wont be using that. Delete API folder.
+
+5. Move UI project to Presentation folder and delete UI folder.
+
+6. You are still using using "padding-top: 13px" to vertically center contents of nav.
+   (green area in image 1 only exists in top, not bottom. this means it is not vertically centered,
+   but it looks like its vertically centered in your screen. for Full HD+, or 4K screens this 
+   may not be vertically centered)
+   Use flex. I have added demo html and css files. In nav-menu.component.ts, 
+   change ./nav-menu.component.html to ./nav-menu.component-demo.html and 
+   change ./nav-menu.component.css to ./nav-menu.component-demo.css to see how it renders.
+
+7. Remove "margin: -15px 0px 22px 52px" in class .row.editor-numbers (Image 3). 
+   Just like with nav-menu, you are trying to cut cake with axe. 
+   It is possible to cut cake with axe, but that doesnt mean you should do it. 
+   Like you use knife instead of axe for cutting cake, 
+   we use flex-box for positioning things like this, instead of giving random numbers 
+   for margins and paddings untill it looks okay. Learn css flex-box properly. 
+   Redo this entire area with flex-box. In review comments 01 i have added URL 
+   to flex box's documentation. Read that completely from top to bottom.
+   
+8. Currently you have done similar margin-padding-adjustment for user tile component. (image 4)
+   It is taking 100% width of screen and is being 
+   rendered incorreclty because, again, you are using axe to cut cake.
+   In user-component (user-dashboard-component), use flex to divide space between 
+   user tiles in right and profile-tile in left.
