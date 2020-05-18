@@ -36,12 +36,11 @@
 
   <ItemGroup>
     <None Remove="ClientApp\src\app\component\profile-tile\profile-tile.component.spec.ts" />
-    <None Remove="ClientApp\src\app\pages\user\home\StyleSheet.css" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="ClientApp\src\app\component\" />
-    <Folder Include="ClientApp\src\app\models\user\" />
+    <Folder Include="ClientApp\src\app\models\user-models\" />
     <Folder Include="ClientApp\src\app\service\data\" />
     <Folder Include="Controllers\Helpers\" />
   </ItemGroup>

@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ProfileTile } from '../../models/user/profile-tile';
-import { UserTile } from '../../models/user/user-tile';
+import { ProfileTile } from '../../models/user-models/profile-tile';
+import { UserTile } from '../../models/user-models/user-tile';
 
 @Component({
   selector: 'app-profile-tile',

@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { UserTile } from '../../models/user/user-tile';
-import { ProfileTile } from '../../models/user/profile-tile';
+import { UserTile } from '../../models/user-models/user-tile';
+import { ProfileTile } from '../../models/user-models/profile-tile';
 
 @Component({
-  selector: 'app-user-dashboard',
-  templateUrl: './user-dashboard.component.html',
-  styleUrls: ['./user-dashboard.component.css']
+  selector: 'app-user',
+  templateUrl: './user.component.html',
+  styleUrls: ['./user.component.css']
 })
-export class UserDashboardComponent implements OnInit {
+export class UserComponent implements OnInit {
     public userTileData = new UserTile();
     public profileTileData = new ProfileTile();
     constructor() {

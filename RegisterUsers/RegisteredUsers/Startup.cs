@@ -5,6 +5,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using RegisteredUsers.Infrastructure.Dependency;
+using RegisteredUsers.Presentation;
 
 namespace RegisteredUsers
 {
@@ -20,6 +21,8 @@ namespace RegisteredUsers
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.Configure<AppSettings>(this.Configuration);
+
             services.BindDependency(Configuration);
 
             services.AddControllersWithViews();

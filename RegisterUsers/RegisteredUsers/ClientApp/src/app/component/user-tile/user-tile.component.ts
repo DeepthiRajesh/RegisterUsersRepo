@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { UserTile } from '../../models/user/user-tile';
+import { UserTile } from '../../models/user-models/user-tile';
 
 @Component({
   selector: 'app-user-tile',
