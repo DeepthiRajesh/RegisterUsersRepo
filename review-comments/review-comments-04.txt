@@ -1,0 +1,6 @@
+1. Create a class AppSettings in the same folder where appsettings.json exists. 
+   Add necessary properties in that class for reading header settings from appsettings.json.
+   Make necessary change in startup.cs to set AppSettings class as configuration class.
+   Create controller "ConfigurationController" and create a GET api in it to return this header settings.
+   From nav menu component, call this api to get header settings 
+   and display that in nav menu instead of hard coded items. You will be using ngFor for repeating each item.
