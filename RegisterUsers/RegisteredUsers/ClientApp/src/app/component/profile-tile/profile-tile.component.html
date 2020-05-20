@@ -1,28 +1,27 @@
 <div class="profile-area">
-  <div class="user-id">
+  <section class="user-id">
     <span class="user-id">USER ID: {{profileTile.userId}}</span>
-  </div>
-
-  <div class="dropdown-menu">
-    <select class="form-control-item" id="select_taxonomy">
-      <option value="deo" class="option-color" id="1" disabled selected hidden>User Actions</option>
-      <option value="deo" class="option-color" id="2" href="#">Compose message to User</option>
-      <option value="nessie" class="option-color" id="3" href="#">View Activity</option>
-      <option value="controlroom" class="option-color" id="4" href="#">Enter Account</option>
-      <option value="nessie" id="3" class="option-color" href="#">View Comment</option>
-      <option value="controlroom" class="option-color" id="4" href="#">Deactivate Account</option>
-    </select>
-
-  </div>
-  <div class="button-area">
-    <button href="#" class=" btn-nav-prev">
-      <i class="fa fa-chevron-left"></i>Prev.
-    </button>
-    <button href="#" class=" btn-nav-next">
-      Next<i class=" fa fa-chevron-right"></i>
-    </button>
-  </div>
+  </section>
+  <section class="dropdown-menu">
+      <select class="form-control-item" id="select_taxonomy">
+        <option value="deo" class="option-color" id="1" disabled selected hidden>User Actions</option>
+        <option value="deo" class="option-color" id="2" href="#">Compose message to User</option>
+        <option value="nessie" class="option-color" id="3" href="#">View Activity</option>
+        <option value="controlroom" class="option-color" id="4" href="#">Enter Account</option>
+        <option value="nessie" id="3" class="option-color" href="#">View Comment</option>
+        <option value="controlroom" class="option-color" id="4" href="#">Deactivate Account</option>
+      </select>
+  </section>
+  <section class="button-area">
+      <button href="#" class=" btn-nav">
+        <i class="fa fa-chevron-left"></i>Prev.
+      </button>
+      <button href="#" class=" btn-nav">
+        Next<i class=" fa fa-chevron-right"></i>
+      </button>
+  </section>
 </div>
+<!--profile-area-->
 <div class="profile-card-area">
   <div class="profile-header">
     <div class="media profile">
@@ -36,8 +35,8 @@
             {{userTile.firstName}} {{userTile.middleName}} {{userTile.lastName}}
           </a>
 
-          <span class="bg-cyan label"></span>
-          <span class="bg-orange label"></span>
+          <!--<span class="bg-cyan label"></span>
+          <span class="bg-orange label"></span>-->
         </h2>
         <div class="list-unstyled">
           <p class="lead">
@@ -71,57 +70,64 @@
       </div>
     </div>
   </div>
-  <div class="profile-footer">
-    <div class="row editor-numbers">
-      <div class="row1">
-        <p>
-          <span class="nowrap"><span class="tot-number">{{userTile.editingAssignment}}</span><span class="number-label">EDITING ASSIGNMENTS</span></span>
-        </p>
-        <p>
-          <span class="nowrap"><strong class="number bg-cyan">{{profileTile.current}}</strong>Current</span>
-          <span class="nowrap"><strong class="number inverse">{{profileTile.completed}}</strong>Completed</span>
-        </p>
-      </div>
-      <div class="row1">
-        <p>
-          <span class="nowrap">
-            <span class="tot-number">{{userTile.reviewAssignments}}</span>
-            <span class="number-label">REVIEW ASSIGNMENTS</span>
-          </span>
-        </p>
-        <p>
-          <span class="nowrap"><strong class="number bg-cyan">{{profileTile.current}}</strong>Current</span>
-          <span class="nowrap"><strong class="number inverse">{{profileTile.endose}}</strong>Endorsed</span><br />
-          <span class="nowrap"><strong class="number inverse">{{profileTile.reject}}</strong>Withdrew or Recommended rejection</span>
+  <!--profile-footer-->
+  <div class="profile-footer-area">
+    <div class="profile-footer">
+      <section class="row editor-numbers">
+        <ul class="row1">
+          <li>
+            <span class="nowrap"><span class="tot-number">{{userTile.editingAssignment}}</span><span class="number-label">EDITING ASSIGNMENTS</span></span>
+          </li>
+          <li>
+            <span class="nowrap"><strong class="number bg-cyan">{{profileTile.current}}</strong>Current</span>
+            <span class="nowrap"><strong class="number inverse">{{profileTile.completed}}</strong>Completed</span>
+          </li>
+        </ul>
+      </section>
+      <section class="row editor-numbers">
+        <ul class="row1">
+          <li>
+            <span class="nowrap">
+              <span class="tot-number">{{userTile.reviewAssignments}}</span>
+              <span class="number-label">REVIEW ASSIGNMENTS</span>
+            </span>
+          </li>
+          <li>
+            <span class="nowrap"><strong class="number bg-cyan">{{profileTile.current}}</strong>Current</span>
+            <span class="nowrap"><strong class="number inverse">{{profileTile.endose}}</strong>Endorsed</span><br />
+            <span class="nowrap"><strong class="number inverse">{{profileTile.reject}}</strong>Withdrew or Recommended rejection</span>
 
-        </p>
-      </div>
-      <div class="row1">
-        <p>
-          <span class="nowrap"><span class="tot-number">{{userTile.submission}}</span><span class="number-label">SUBMISSION</span></span>
-        </p>
-        <p>
-          <span class="nowrap"><strong class="number bg-cyan">{{profileTile.review}}</strong>In review</span><br />
-          <span class="nowrap"><strong class="number bg-cyan">{{profileTile.validation}}</strong>Initial validation</span><br />
-          <span class="nowrap"><strong class="number inverse">{{profileTile.accept}}</strong>Accepted</span>
-          <span class="nowrap"><strong class="number inverse">{{profileTile.rejected}}</strong>Rejected</span>
-        </p>
-      </div>
+          </li>
+        </ul>
+      </section>
+      <section class="row editor-numbers">
+        <ul class="row1">
+          <li>
+            <span class="nowrap"><span class="tot-number">{{userTile.submission}}</span><span class="number-label">SUBMISSION</span></span>
+          </li>
+          <li>
+            <span class="nowrap"><strong class="number bg-cyan">{{profileTile.review}}</strong>In review</span><br />
+            <span class="nowrap"><strong class="number bg-cyan">{{profileTile.validation}}</strong>Initial validation</span><br />
+            <span class="nowrap"><strong class="number inverse">{{profileTile.accept}}</strong>Accepted</span>
+            <span class="nowrap"><strong class="number inverse">{{profileTile.rejected}}</strong>Rejected</span>
+          </li>
+        </ul>
+      </section>
     </div>
-    <div class="row editor-numbers">
-      <div class="col-lg-4 col-md-6 col-sm-6">
-        <p>
-          <span class="nowrap"><span class="tot-number">{{profileTile.boardInvitation}}</span><span class="number-label">BOARD INVITATIONS</span></span>
-        </p>
-        <p>
-          <span class="nowrap"><strong class="number bg-cyan">{{profileTile.accepted}}</strong>Accepted</span>
-          <span class="nowrap"><strong class="number inverse">{{profileTile.pending}}</strong>Pending</span><br />
-          <span class="nowrap"><strong class="number inverse">{{profileTile.declaine}}</strong>Declined</span>
-          <span class="nowrap"><strong class="number inverse">{{profileTile.revoke}}</strong>Revoked</span><br />
-          <span class="nowrap"><strong class="number inverse">{{profileTile.remove}}</strong>Removed from board</span>
+      <section class="row editor-numbers-list">
+        <ul class="row2">
+          <li>
+            <span class="nowrap"><span class="tot-number">{{profileTile.boardInvitation}}</span><span class="number-label">BOARD INVITATIONS</span></span>
+          </li>
+          <li>
+            <span class="nowrap"><strong class="number bg-cyan">{{profileTile.accepted}}</strong>Accepted</span>
+            <span class="nowrap"><strong class="number inverse">{{profileTile.pending}}</strong>Pending</span><br />
+            <span class="nowrap"><strong class="number inverse">{{profileTile.decline}}</strong>Declined</span>
+            <span class="nowrap"><strong class="number inverse">{{profileTile.revoke}}</strong>Revoked</span><br />
+            <span class="nowrap"><strong class="number inverse">{{profileTile.remove}}</strong>Removed from board</span>
 
-        </p>
-      </div>
-    </div>
+          </li>
+        </ul>
+      </section>
   </div>
 </div>

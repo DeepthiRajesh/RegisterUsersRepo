@@ -1,17 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { UserTile } from '../../models/user-models/user-tile';
 import { ProfileTile } from '../../models/user-models/profile-tile';
+import { UserService } from '../../service/web-request/user.service';
 
 @Component({
-  selector: 'app-user',
-  templateUrl: './user.component.html',
-  styleUrls: ['./user.component.css']
+    selector: 'app-user',
+    templateUrl: './user.component.html',
+    styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
     public userTileData = new UserTile();
     public profileTileData = new ProfileTile();
+    userTile: UserTile[] = [];
     constructor() {
-    
+
         this.userTileData.firstName = "Deepthi";
         this.userTileData.middleName = "Rajesh ";
         this.userTileData.lastName = "Kuzhikkattil";
@@ -25,7 +27,7 @@ export class UserComponent implements OnInit {
         this.profileTileData.userId = 1143191;
         this.profileTileData.place = "Troy, United States";
         this.profileTileData.mail = "automationuser081320@vialoopregistration.com";
-        this.profileTileData.current = 0;
+        this.profileTileData.current = 0; 
         this.profileTileData.completed = 1;
         this.profileTileData.endose = 0;
         this.profileTileData.reject = 1;
@@ -42,7 +44,7 @@ export class UserComponent implements OnInit {
     }
 
     ngOnInit() {
-
-  }
-
+        this.userTile[0] = this.userTileData;
+    }
+   
 }

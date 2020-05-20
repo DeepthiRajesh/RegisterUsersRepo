@@ -7,7 +7,7 @@ import { UserTile } from '../../models/user-models/user-tile';
   styleUrls: ['./user-tile.component.css']
 })
 export class UserTileComponent implements OnInit {
-    @Input() userTile = new  UserTile(); 
+    @Input() users: UserTile[];
     constructor() {
        
     }

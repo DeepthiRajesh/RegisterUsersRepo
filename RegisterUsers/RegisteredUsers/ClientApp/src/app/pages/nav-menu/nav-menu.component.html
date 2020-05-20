@@ -1,55 +1,43 @@
-<header>
-  <nav class="navbar">
-
-
-    <div class="navbar-brand">
-      <a class="navbar-brand" [routerLink]='["/"]'><img id="logo" class="img-fluid" src="./assets/images/logo-icon.png" alt=""></a>
+<nav class="flex space-between nav-height">
+  <section class="flex">
+    <div>
+      <a><img class="nav-height" src="./assets/images/logo-icon.png" alt=""></a>
     </div>
 
-    <div class="nav-item-container">
-      <div class="navbar-brand ">
-        <select class="form-control navbar-brand" id="select_taxonomy">
-          <option value="deo" id="1" disabled selected hidden href="#">DIGITAL EDITORIAL OFFICE</option>
-          <option value="deo" id="2" >Digital Editorial Office</option>
-          <option value="nessie" id="3" >Nessie</option>
-          <option value="controlroom" id="4" >Control Room</option>
-        </select>
-      </div>
+    <select class="no-border">
+      <option value="deo" disabled selected hidden href="#">DIGITAL EDITORIAL OFFICE</option>
+      <option value="deo">Digital Editorial Office</option>
+      <option value="nessie">Nessie</option>
+      <option value="controlroom">Control Room</option>
+    </select>
+ 
+    <ul class="tabs-container" *ngFor="let header of appSettings.headerSettings.tabs">
+      <li><a class="tabs-color">{{header.title}}</a></li>
+    </ul>
 
-      <a class="navbar-brand " href="#">MANUSCRIPT</a><b></b>
-      <a class="navbar-brand " href="#">RESEARCH TOPIC</a>
-      <a class="navbar-brand " href="#">EDITORS</a>
-      <a class="navbar-brand " href="#">BOARD INVITATIONS</a>
-      <a class="navbar-brand " href="#">REGISTERED USERS</a>
+    <select class="no-border more">
+      <option value="more" disabled selected hidden>MORE</option>
+      <option value="journals">JOURNALS</option>
+    </select>
+  </section>
 
-      <div class="navbar-brand">
-        <select class="form-control-file navbar-brand" id="select_more">
-          <option value="more" disabled selected hidden>MORE</option>
-          <option value="journals" >JOURNALS</option>
-        </select>
-      </div>
-    </div>
-    <div class="navbar-brand navbar-nav">
-
-      <a class="navbar-brand" href="#">MY FRONTIERS</a>
-      <select class="form-control-file navbar-brand" id="select_item">
-        <option value="deo" id="5" disabled selected hidden href="#">OFFICE</option>
-        <option value="deo" id="6" >EOF</option>
-        <option value="nessie" id="7" >POF</option>
-        <option value="controlroom" id="8" >TSOF</option>
-        <option value="deo" id="9" >EVOF</option>
-        <option value="nessie" id="10" >BOF</option>
-        <option value="controlroom" id="11">COMOF</option>
-        <option value="nessie" id="12" >CONFIG</option>
-        <option value="controlroom" id="13">AOF</option>
+  <section class="flex ">
+    <div class="nav-adjust">
+      <a class="tabs-color">MY FRONTIERS</a>
+      <select class="no-border">
+        <option value="deo" disabled selected hidden href="#">OFFICE</option>
+        <option value="deo">EOF</option>
+        <option value="nessie">POF</option>
+        <option value="controlroom">TSOF</option>
+        <option value="deo">EVOF</option>
+        <option value="nessie">BOF</option>
+        <option value="controlroom">COMOF</option>
+        <option value="nessie">CONFIG</option>
+        <option value="controlroom">AOF</option>
       </select>
     </div>
-    <div class="navbar-brand-item">
-      <a class="navbar-brand-item" [routerLink]='["/"]'><img id="profilelogo" class="img-fluid" src="./assets/images/profile-logo" alt=""></a>
+    <div>
+      <a><img class="nav-height" src="./assets/images/profile-logo" alt=""></a>
     </div>
-
-  </nav>
-</header>
-
-
-
+  </section>
+</nav>

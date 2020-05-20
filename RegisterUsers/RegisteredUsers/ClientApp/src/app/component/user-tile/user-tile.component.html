@@ -1,4 +1,4 @@
-<div class="container-select">
+<div class="container-select" *ngFor="let userTile of users">
   <div class="paper">
     <div class="teaser-article-type ">
       <input type="checkbox" class="users-found" />  {{userTile.articleType}}
@@ -36,7 +36,7 @@
 
 
 
-<div class="container-select">
+<!--<div class="container-select">
   <div class="select" data-registereduser-id="1143190"><div class="pick"></div></div>
   <div class="paper" data-registereduser-id="1143190">
 
@@ -427,4 +427,4 @@
       <i class="fa fa-arrow-right"></i>View card
     </a>
   </div>
-</div>
+</div>-->
