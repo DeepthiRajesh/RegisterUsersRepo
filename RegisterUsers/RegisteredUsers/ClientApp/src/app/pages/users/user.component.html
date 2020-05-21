@@ -1,142 +1,130 @@
 <!--filter area-->
-<div class="main-container">
-  <div class="border-filter">
-    <span class="filter">Filter by</span>
-    <br>
-    <select class="form-control">
-      <option value="0">All users</option>
-      <option value="1">Reviewers</option>
-      <option value="2">Manuscript authors</option>
-      <option value="3">Deactivated accounts</option>
-      <option value="4">Non-activated accounts</option>
-      <option value="5">Authors with Manuscript(s)  in review</option>
-    </select>
-  </div>
-  <div class="border-order">
-    <span class="order">Order by</span>
-    <br>
+  <div class="main-area-div">
+    <div class="main-container">
+      <section class="border-filter">
+        <span class="filter">Filter by</span>
+        <br>
+        <select class="form-control">
+          <option value="0">All users</option>
+          <option value="1">Reviewers</option>
+          <option value="2">Manuscript authors</option>
+          <option value="3">Deactivated accounts</option>
+          <option value="4">Non-activated accounts</option>
+          <option value="5">Authors with Manuscript(s)  in review</option>
+        </select>
+      </section>
+      <section class="border-order">
+        <span class="order">Order by</span>
+        <br>
 
-    <select class="form-control">
-      <option value="0">Alphabetical (Last Name)</option>
-      <option value="1">Oldest registration</option>
-      <option value="2" selected="selected">Newest registration</option>
-    </select>
-
-    <input type="button" class=" filter-btn " value=" Clear filters ">
-
-  </div>
-</div>
-
-<!--search area-->
-<div class="registered-users-list">
-
-  <div class="main-field">
-    <div class="search-field">
-      <form role="form" class=" =search-field">
-        <input type="text" class="search-field search-area" id="search" placeholder="Search by name, user id or email address">
-        <div class=" btns-search">
-          <button type="submit" class="btn-search" id="search-box-button">
-            <i class="fa fa-search" aria-hidden="true"></i>
-          </button>
-        </div>
-      </form>
-    </div><br />
-    <div class="search-results">
-      <input type="checkbox" class="users-found">
-      <span class="txt-color">1-10 of 568,361 user(s) found</span>
+        <select class="form-control">
+          <option value="0">Alphabetical (Last Name)</option>
+          <option value="1">Oldest registration</option>
+          <option value="2" selected="selected">Newest registration</option>
+        </select>
+        
+        <input type="button" class=" filter-btn " value=" Clear filters ">
+      
+      </section>
     </div>
-  </div>
-  <div>
 
-  </div>
-  <!--usertile area-->
-  <app-user-tile  [users]="userTile"></app-user-tile>
-</div>
+    <!--search area-->
+    <div class="flex-area">
+      <div class="registered-users-list">
 
-
-<!--profile area-->
-
-<div class=" profile-card">
- 
-
-
-  <app-profile-tile  [userTile]="userTileData" [profileTile]="profileTileData"></app-profile-tile>
-  <!--rest-->
-
-  <div class="assignments-filters top-boxed">
-    <div class="row">
-      <div class="col-md-12 filtering">
-        <div class="footer-area">
-          <div class="field-footer">
-            <select class="form-control-footer">
-              <option value="" class="footer-options">Open and closed</option>
-              <option value="" class="footer-options">Open</option>
-              <option value="" class="footer-options">Closed</option>
-            </select>
+        <div class="main-field">
+          <div class="search-field">
+            <form role="form" class=" =search-field">
+              <input type="text" class="search-field search-area" id="search" placeholder="Search by name, user id or email address">
+              <div class=" btns-search">
+                <button type="submit" class="btn-search" id="search-box-button">
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+              </div>
+            </form>
+          </div><br />
+          <div class="search-results">
+            <input type="checkbox" class="users-found">
+            <span class="txt-color">1-10 of 568,361 user(s) found</span>
           </div>
-          <div class="field-footer">
-            <select class="form-control-footer">
-              <option value="" class="footer-options" selected disabled hidden>All type of assignments</option>
-              <option value="" class="footer-options">Author</option>
-              <option value="" class="footer-options">Review Editor</option>
-              <option value="" class="footer-options">Assosiate Editor</option>
-            </select>
-          </div>
-          <div class="field-footer">
-            <select class="form-control-footer">
-              <option value="" class="footer-options" selected disabled hidden>All Journals/section</option>
-              <option value="" class="footer-options">Brain Imaging Method</option>
-            </select>
-          </div>
-          <input type="button" class=" filter-btn-footer " value=" Clear">
         </div>
+        <div>
+
+        </div>
+        <!--usertile area-->
+        <app-user-tile [users]="userTile"></app-user-tile>
+      </div>
+
+      <div class=" profile-card">
+
+
+
+        <app-profile-tile [userTile]="userTileData" [profileTile]="profileTileData"></app-profile-tile>
+        <!--rest-->
+
+              <div class="footer-area">
+                <div class="field-footer">
+                  <select class="form-control-footer">
+                    <option value="" class="footer-options">Open and closed</option>
+                    <option value="" class="footer-options">Open</option>
+                    <option value="" class="footer-options">Closed</option>
+                  </select>
+                </div>
+                <div class="field-footer">
+                  <select class="form-control-footer">
+                    <option value="" class="footer-options" selected disabled hidden>All type of assignments</option>
+                    <option value="" class="footer-options">Author</option>
+                    <option value="" class="footer-options">Review Editor</option>
+                    <option value="" class="footer-options">Assosiate Editor</option>
+                  </select>
+                </div>
+                <div class="field-footer">
+                  <select class="form-control-footer">
+                    <option value="" class="footer-options" selected disabled hidden>All Journals/section</option>
+                    <option value="" class="footer-options">Brain Imaging Method</option>
+                  </select>
+                </div>
+                <input type="button" class=" filter-btn-footer " value=" Clear">
+              </div>
+
+        <h2 class="status-bar">OPEN</h2>
+
+
+        <div class="history-footor">
+          <div class="manuscript-header">
+            <section class="hearer-footer">
+              <h4 class="text-nowrap">AUTHOR</h4>
+            </section>
+            <section class="review-info">
+              <a href="#" class="footer-area-right">
+                <i class="fa fa-arrow-right"></i><span class="hidden-xs">Enter </span>Review Forum
+              </a>
+            </section>
+          </div>
+          <div class="manuscript-body">
+            <div class="paper">
+              <p class="review-stage">
+                Original Research | Test Short Name | Received on 28/04/2020
+              </p>
+              <h3 class="teaser-title">
+
+                20 PITS Team-E Article Special chars-28-04-2020E
+
+              </h3>
+              <p class="teaser-authors">
+                <mark class="highlight">Automation First Name Automation Middle Name Automation Last Name<sup>1,2</sup></mark>
+              </p>
+              <p class="teaser-affiliations">
+                <sup>1</sup>TES International (United States), Troy, United States<br>
+                <sup>2</sup>Corpus Christi College, University of Cambridge, Cambridge, United Kingdom
+              </p>
+              <p class="view-field">
+                <a class="dotted readmore" href="#">View details</a>
+              </p>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
-
-
-  <h2 class="status-bar">OPEN</h2>
-
-
-  <div class="history-footor">
-    <div class="manuscript-header">
-        <div class="hearer-footer">
-          <h4 class="text-nowrap">AUTHOR</h4>
-        </div>
-        <div class="col-sm-4 col-xs-5">
-          <a href="#" class="footer-area-right">
-            <i class="fa fa-arrow-right"></i><span class="hidden-xs">Enter </span>Review Forum
-          </a>
-        </div>
-    </div>
-    <div class="manuscript-body">
-      <div class="paper">
-        <p class="review-stage">
-          Original Research | Test Short Name | Received on 28/04/2020
-        </p>
-        <h3 class="teaser-title">
-
-          20 PITS Team-E Article Special chars-28-04-2020E
-
-        </h3>
-        <p class="teaser-authors">
-          <mark class="highlight">Automation First Name Automation Middle Name Automation Last Name<sup>1,2</sup></mark>
-        </p>
-        <p class="teaser-affiliations">
-          <sup>1</sup>TES International (United States), Troy, United States<br>
-          <sup>2</sup>Corpus Christi College, University of Cambridge, Cambridge, United Kingdom
-        </p>
-        <p class="view-field">
-          <a class="dotted readmore" href="#">View details</a>
-        </p>
-      </div>
-    </div>
-  </div>
-
-</div>
-
-
-
-
-
-
