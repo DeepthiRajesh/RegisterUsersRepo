@@ -1,4 +1,4 @@
-<div class="main-field" *ngFor="let userTile of users">
+<div class="main-field" *ngFor="let userTile of users" (click)="profileDetail(userTile.id)">
   <div class="paper">
     <div class="article-type">
       <section class="teaser-article-type ">
@@ -14,7 +14,7 @@
           <img class="profile-img" src="./assets/images/profile-logo">
         </a>
       </section>
-      <section>
+      <section class="name-area">
         <h3 class="teaser-title">
           <a href="#" class="teaser-title">
             {{userTile.firstName}} {{userTile.middleName}} {{userTile.lastName}}
@@ -30,9 +30,9 @@
       <section class="review-info">
         <div class="row">
           <div class="col-xs-12">
-            <strong>{{userTile.editingAssignments}} </strong>editing assignments
-            <strong>{{userTile.reviewAssignments}}</strong>review assignments
-            <strong>{{userTile.submission}}</strong>submission
+            <strong class="strong">{{userTile.editingAssignments}} </strong>editing assignments
+            <strong class="strong">{{userTile.reviewAssignments}}</strong>review assignments
+            <strong class="strong" >{{userTile.submission}}</strong>submission
           </div>
         </div>
       </section>

@@ -3,8 +3,7 @@
 .main-field {
   background: #fff;
   border: 1px solid #e0dddc;
-  padding: 13px 36px 14px 41px;
-  display: flex;
+  padding: 13px 21px 24px 41px;
 }
 .main-field:hover {
     background-color: lightgray;
@@ -20,9 +19,20 @@ img.profile-img {
   max-height: 59px;
   border-radius: 2px;
 }
+
+section.name-area {
+  margin-left: 20px;
+}
+
+strong.strong {
+  margin: 7px;
+}
+
+
 section.user-card-details {
   align-self: center;
 }
+
 a.btn-profile {
   text-decoration: none;
   color: #d54449;
