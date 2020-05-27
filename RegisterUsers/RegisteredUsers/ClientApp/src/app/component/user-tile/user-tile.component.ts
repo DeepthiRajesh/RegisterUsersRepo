@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
-import { UserTile } from '../../models/user-models/user-tile';
+import { User } from '../../models/user-models/user';
 
 @Component({
     selector: 'app-user-tile',
@@ -7,11 +7,9 @@ import { UserTile } from '../../models/user-models/user-tile';
     styleUrls: ['./user-tile.component.css']
 })
 export class UserTileComponent implements OnInit {
-    @Input() users: UserTile[];
+    @Input() users: User[];
     @Output() userDetails: EventEmitter<any> = new EventEmitter<any>();
-    constructor() {
-
-    }
+    constructor() { }
 
     ngOnInit() {
 

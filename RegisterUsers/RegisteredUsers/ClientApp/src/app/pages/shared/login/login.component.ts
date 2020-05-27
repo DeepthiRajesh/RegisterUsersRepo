@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { LoginModel } from '../../../models/common/login.model';
 import { UserService } from '../../../service/web-request/user.service';
 import { Router } from '@angular/router';
 import { HttpResponse, HttpErrorResponse } from '@angular/common/http';
@@ -13,12 +12,12 @@ export class LoginComponent implements OnInit {
 
     public validationMessage: string;
 
-    public login: LoginModel
+    public login: any
 
     constructor(private userService: UserService,
         private router: Router) {
         this.validationMessage = '';
-        this.login = new LoginModel();
+        
     }
 
     ngOnInit() {

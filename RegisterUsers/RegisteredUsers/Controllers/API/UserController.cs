@@ -18,46 +18,15 @@ namespace RegisteredUsers.Presentation.UI.Controllers.API
             this.userService = userService;
         }
 
-        [HttpPost("registration")]
-        public IActionResult Registraion([FromBody] UserViewModel model)
+      
+        
+        [HttpGet]
+        public IActionResult GetUserDetails()
         {
-            try
+          
+            try 
             {
-                return Ok(this.userService.Registration(model.ToUserDomain()));
-            }
-            catch (Exception ex)
-            {
-                throw new ArgumentNullException(ex.Message);
-            }
-        }
-
-        [HttpPost("login")]
-        public IActionResult IsAuthorise([FromBody] LoginViewModel model)
-        {
-            if (string.IsNullOrWhiteSpace(model.Email) || string.IsNullOrWhiteSpace(model.Password))
-            {
-                return BadRequest("Username and Password can not be null.");
-            }
-            try
-            {
-                return Ok(this.userService.IsAuthorise(model.Email, model.Password));
-            }
-            catch (Exception ex)
-            {
-                throw new ArgumentNullException(ex.Message);
-            }
-        }
-
-        [HttpGet("{userId}")]
-        public IActionResult GetUserDetailsById([FromRoute] int userId)
-        {
-            if (userId <= 0)
-            {
-                return Ok(HttpStatusCode.BadRequest);
-            }
-            try
-            {
-                var result = this.userService.GetUserDetailsById(userId);
+                var result = this.userService.GetUserDetails();
 
                 return Ok(result.ToUserDetailViewModel());
             }
@@ -67,17 +36,6 @@ namespace RegisteredUsers.Presentation.UI.Controllers.API
             }
         }
 
-        [HttpPost("update")]
-        public IActionResult Update([FromBody] UserDetailViewModel userModel)
-        {
-            try
-            {
-                return Ok(this.userService.Update(userModel.ToUpdateUserDomain()));
-            }
-            catch (Exception ex)
-            {
-                throw new ArgumentNullException(ex.Message);
-            }
-        }
+       
     }
 }

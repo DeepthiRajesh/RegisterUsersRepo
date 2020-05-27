@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { RegistrationModel } from '../../../models/common/registration.model';
 import { UserService } from '../../../service/web-request/user.service';
 import { HttpResponse, HttpErrorResponse } from '@angular/common/http';
 import { Router } from '@angular/router';
@@ -11,12 +10,12 @@ import { Router } from '@angular/router';
 })
 export class RegistrationComponent implements OnInit {
     validationMessage: string;
-    public registration: RegistrationModel;
+    public registration: any;
 
     constructor(private userService: UserService,
         private router: Router) {
         this.validationMessage = '';
-        this.registration = new RegistrationModel();
+       
 
     }
 

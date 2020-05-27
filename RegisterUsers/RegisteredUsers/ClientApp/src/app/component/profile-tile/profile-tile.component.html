@@ -41,11 +41,11 @@
 
             {{userTile.author}}<br>
 
-            {{profileTile.place}}
+            {{userTile.place}}
           </p>
           <p class="email">
             <a href="#" class="email-style">
-              <i class="far fa-envelope"></i><span> {{profileTile.mail}}</span>
+              <i class="far fa-envelope"></i><span> {{userTile.email}}</span>
             </a>
           </p>
         </div>
@@ -77,8 +77,8 @@
             <span class="nowrap"><span class="tot-number">{{userTile.editingAssignments}}</span><span class="number-label">EDITING ASSIGNMENTS</span></span>
           </li>
           <li>
-            <span class="nowrap"><strong class="number bg-cyan">{{profileTile.current}}</strong>Current</span>
-            <span class="nowrap"><strong class="number inverse">{{profileTile.completed}}</strong>Completed</span>
+            <span class="nowrap"><strong class="number bg-cyan">{{userTile.editingAssignmentsCurrent}}</strong>Current</span>
+            <span class="nowrap"><strong class="number inverse">{{userTile.editingAssignmentsCompleted}}</strong>Completed</span>
           </li>
         </ul>
       </section>
@@ -91,9 +91,9 @@
             </span>
           </li>
           <li>
-            <span class="nowrap"><strong class="number bg-cyan">{{profileTile.current}}</strong>Current</span>
-            <span class="nowrap"><strong class="number inverse">{{profileTile.endose}}</strong>Endorsed</span><br />
-            <span class="nowrap"><strong class="number inverse">{{profileTile.reject}}</strong>Withdrew or Recommended rejection</span>
+            <span class="nowrap"><strong class="number bg-cyan">{{userTile.reviewAssignmentsCurrent}}</strong>Current</span>
+            <span class="nowrap"><strong class="number inverse">{{userTile.reviewAssignmentsEndosed}}</strong>Endorsed</span><br />
+            <span class="nowrap"><strong class="number inverse">{{userTile.reviewAssignmentsRejected}}</strong>Withdrew or Recommended rejection</span>
 
           </li>
         </ul>
@@ -104,10 +104,10 @@
             <span class="nowrap"><span class="tot-number">{{userTile.submission}}</span><span class="number-label">SUBMISSION</span></span>
           </li>
           <li>
-            <span class="nowrap"><strong class="number bg-cyan">{{profileTile.review}}</strong>In review</span><br />
-            <span class="nowrap"><strong class="number bg-cyan">{{profileTile.validation}}</strong>Initial validation</span><br />
-            <span class="nowrap"><strong class="number inverse">{{profileTile.accept}}</strong>Accepted</span>
-            <span class="nowrap"><strong class="number inverse">{{profileTile.rejected}}</strong>Rejected</span>
+            <span class="nowrap"><strong class="number bg-cyan">{{userTile.submissionInReview}}</strong>In review</span><br />
+            <span class="nowrap"><strong class="number bg-cyan">{{userTile.submissionInitialValidation}}</strong>Initial validation</span><br />
+            <span class="nowrap"><strong class="number inverse">{{userTile.submissionAccepted}}</strong>Accepted</span>
+            <span class="nowrap"><strong class="number inverse">{{userTile.submissionRejected}}</strong>Rejected</span>
           </li>
         </ul>
       </section>
@@ -115,14 +115,14 @@
       <section class="row editor-numbers-list">
         <ul class="row2">
           <li>
-            <span class="nowrap"><span class="tot-number">{{profileTile.boardInvitation}}</span><span class="number-label">BOARD INVITATIONS</span></span>
+            <span class="nowrap"><span class="tot-number">{{userTile.boardInvitations}}</span><span class="number-label">BOARD INVITATIONS</span></span>
           </li>
           <li>
-            <span class="nowrap"><strong class="number bg-cyan">{{profileTile.accepted}}</strong>Accepted</span>
-            <span class="nowrap"><strong class="number inverse">{{profileTile.pending}}</strong>Pending</span><br />
-            <span class="nowrap"><strong class="number inverse">{{profileTile.decline}}</strong>Declined</span>
-            <span class="nowrap"><strong class="number inverse">{{profileTile.revoke}}</strong>Revoked</span><br />
-            <span class="nowrap"><strong class="number inverse">{{profileTile.remove}}</strong>Removed from board</span>
+            <span class="nowrap"><strong class="number bg-cyan">{{userTile.boardInvitationsAccepted}}</strong>Accepted</span>
+            <span class="nowrap"><strong class="number inverse">{{userTile.boardInvitationsPending}}</strong>Pending</span><br />
+            <span class="nowrap"><strong class="number inverse">{{userTile.boardInvitationsDeclined}}</strong>Declined</span>
+            <span class="nowrap"><strong class="number inverse">{{userTile.boardInvitationsRevoked}}</strong>Revoked</span><br />
+            <span class="nowrap"><strong class="number inverse">{{userTile.boardInvitationsRemoveFromBoard}}</strong>Removed from board</span>
 
           </li>
         </ul>

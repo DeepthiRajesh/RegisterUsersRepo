@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpService } from './http.service';
-import { RegistrationModel } from '../../models/common/registration.model';
 import { Observable } from 'rxjs';
-import { LoginModel } from '../../models/common/login.model';
 import { AppSettings } from '../../models/header/appsettings';
 
 @Injectable({
@@ -12,15 +10,15 @@ export class UserService {
 
     constructor(private http: HttpService) { }
 
-    public getUserDetails(userId: number): Observable<RegistrationModel> {
-      return this.http.get<RegistrationModel>(`https://localhost:44304/api/users/${userId}`);
+    public getUserDetails(): Observable<any> {
+      return this.http.get<any>(`https://localhost:44304/api/users`);
     }
 
-    public registration(data: RegistrationModel): Observable<any> {
+    public registration(data: any): Observable<any> {
         return this.http.post<any>("https://localhost:44304/api/users/registration", data);
     }
 
-    public login(data: LoginModel): Observable<any> {
+    public login(data: any): Observable<any> {
         return this.http.post<any>("https://localhost:44304/api/users/login", data);
     }
     public get(): Observable<AppSettings> {

@@ -40,7 +40,7 @@ namespace RegisteredUsers.DataAccess.Mongo.Repository
                         .Set(s => s.BirthDate, document.BirthDate)
                         .Set(s => s.IsDeleted, document.IsDeleted)
                         .Set(s => s.PhoneNumber, document.PhoneNumber)
-                        .Set(s => s.UserId, document.UserId)
+                        .Set(s => s.UserId, document.UserId)     
                         .Set(s => s.PersonalDetails, new PersonalDetailDocumentMdo
                         { Address= document.Address,
                           City = document.City, 

@@ -1,71 +1,49 @@
 ﻿using RegisteredUsers.Domain.Entities.Entity;
 using RegisteredUsers.Presentation.UI.ViewModel;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace RegisteredUsers.Presentation.UI.Controllers.API.Helpers
 {
     public static class UserControllerHelpers
     {
-        public static User ToUserDomain(this UserViewModel model)
+        public static UserViewModel ToUserDetailViewModel(this User userModel)
         {
-            return model != null ? new User
+            return userModel != null ? new UserViewModel
             {
-                FirstName = model.FirstName,
-                MiddleName = model.MiddleName,
-                LastName = model.LastName,
-                PhoneNumber = model.PhoneNumber,
-                BirthDate = model.BirthDate,
-                IsDeleted = model.IsDeleted,
-                Email = model.Email,
-                Password = model.Password,
-                UserType = model.UserType
-            } : null;
-        }
-
-        public static UserDetail ToUpdateUserDomain(this UserDetailViewModel userModel)
-        {
-            return userModel != null ? new UserDetail
-            {
-                UserId = userModel.UserId,
+                Id = userModel.Id,
                 FirstName = userModel.FirstName,
                 MiddleName = userModel.MiddleName,
                 LastName = userModel.LastName,
-                PhoneNumber = userModel.PhoneNumber,
-                BirthDate = userModel.BirthDate,
-                UserType = userModel.UserType,
-                Address = userModel.Address,
-                City = userModel.City,
-                State = userModel.State,
-                Pincode = userModel.Pincode,
-                Country = userModel.Country,
-                Qualification = userModel.Qualification,
-                JobTitle = userModel.JobTitle,
-                Photo = userModel.Photo
-            } : null;
-
-        }
-
-        public static UserDetailViewModel ToUserDetailViewModel(this UserDetail userModel)
-        {
-            return userModel != null ? new UserDetailViewModel
-            {
-                UserId = userModel.UserId,
-                FirstName = userModel.FirstName,
-                MiddleName = userModel.MiddleName,
-                LastName = userModel.LastName,
-                PhoneNumber = userModel.PhoneNumber,
-                BirthDate = userModel.BirthDate,
-                UserType = userModel.UserType,
+                Author = userModel.Author,
+                ArticleType = userModel.ArticleType,
+                RegistrationDate = userModel.RegistrationDate,
+                EditingAssignments =userModel.EditingAssignments,
+                ReviewAssignments = userModel.ReviewAssignments,
+                Submission = userModel.Submission,
+                Place = userModel.Place,
                 Email = userModel.Email,
-                Address = userModel.Address,
-                City = userModel.City,
-                State = userModel.State,
-                Pincode = userModel.Pincode,
-                Country = userModel.Country,
-                Qualification = userModel.Qualification,
-                JobTitle = userModel.JobTitle,
-                Photo = userModel.Photo
+                EditingAssignmentsCurrent = userModel.EditingAssignmentsCurrent,
+                EditingAssignmentsCompleted = userModel.EditingAssignmentsCompleted,
+                ReviewAssignmentsCurrent = userModel.ReviewAssignmentsCurrent,
+                ReviewAssignmentsEndosed = userModel.ReviewAssignmentsEndosed,
+                ReviewAssignmentsRejected = userModel.ReviewAssignmentsRejected,
+                SubmissionInReview = userModel.SubmissionInReview,
+                SubmissionInitialValidation = userModel.SubmissionInitialValidation,
+                SubmissionAccepted = userModel.SubmissionAccepted,
+                SubmissionRejected = userModel.SubmissionRejected,
+                BoardInvitations= userModel.BoardInvitations,
+                BoardInvitationsPending = userModel.BoardInvitationsPending,
+                BoardInvitationsAccepted = userModel.BoardInvitationsAccepted,
+                BoardInvitationsDeclined = userModel.BoardInvitationsDeclined,
+                BoardInvitationsRevoked = userModel.BoardInvitationsRevoked,
+                BoardInvitationsRemoveFromBoard = userModel.BoardInvitationsRemoveFromBoard,
             } : null;
 
+        }
+        public static IList<UserViewModel> ToUserDetailViewModel(this IList<User> user)
+        {
+            return user.Select(x => ToUserDetailViewModel(x)).ToList();
         }
     }
 }

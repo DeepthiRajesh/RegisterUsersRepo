@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { RegistrationModel } from '../../../models/common/registration.model';
 import { UserService } from '../../../service/web-request/user.service';
 
 @Component({
@@ -9,19 +8,19 @@ import { UserService } from '../../../service/web-request/user.service';
 })
 export class DashboardComponent implements OnInit {
 
-    public data: Array<RegistrationModel>;
+    public data: Array<any>;
     
     constructor(private userService: UserService) {
-        this.data = new Array<RegistrationModel>();
+        this.data = new Array<any>();
        
     }
 
     ngOnInit() {
-        this.getData(1);
+        this.getData();
     }
 
-    public getData(userId: number): void {
-        this.userService.getUserDetails(userId)
+    public getData(): void {
+        this.userService.getUserDetails()
             .subscribe(datas => {
                 this.data.push(datas);
                 console.log(this.data);

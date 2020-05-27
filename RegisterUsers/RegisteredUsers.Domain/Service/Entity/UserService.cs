@@ -1,6 +1,7 @@
 ﻿ using RegisteredUsers.Domain.Abstract.Repository.Entity.User;
 using RegisteredUsers.Domain.Abstract.Service.Entity;
 using RegisteredUsers.Domain.Entities.Entity;
+using System.Collections.Generic;
 
 namespace RegisteredUsers.Domain.Service.Entity
 {
@@ -12,22 +13,11 @@ namespace RegisteredUsers.Domain.Service.Entity
         {
             this.userRepository = userRepository;
         }
-        public int IsAuthorise(string email, string password)
+        
+        public IList<User> GetUserDetails()
         {
-            return this.userRepository.IsAuthorise(email, password);
-        }
-        public bool Registration(User user)
-        {
-            return this.userRepository.Registration(user);
-        }
-        public UserDetail GetUserDetailsById(int userId)
-        {
-            return this.userRepository.GetUserDetailsById(userId);  
+            return this.userRepository.GetUserDetails();  
         }
 
-        public bool Update(UserDetail userDetaiils)
-        {
-            return this.userRepository.Update(userDetaiils);
-        } 
     }
 }
