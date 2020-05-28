@@ -1,0 +1,112 @@
+.login-container {
+  width: 100%;
+  background-color: #eaeaea;
+}
+section.logo-section {
+  display: flex;
+  justify-content: center;
+  padding:14px;
+}
+img.nav-height {
+  max-height: 70px;
+}
+h1.heading-size {
+  font-size: 30px;
+  color: dimgrey;
+}
+section.login-area {
+  background-color: white;
+  width: 75%;
+}
+.login-center {
+  padding: 0px 0px 21px 300px;
+}
+section.footer-content {
+  padding-left: 400px;
+  padding-top: 5px;
+}
+.center-aline {
+  padding: 50px;
+  box-shadow: 0 0px 14px 0px rgba(0,0,0,0.2);
+}
+h3.heading-adjust {
+  display: flex;
+  justify-content: center;
+}
+p.external-login {
+  display: flex;
+  justify-content: center;
+}
+h5 {
+  display: flex;
+  flex-direction: row;
+  color: #c5c5c5;
+  padding: 0 100px 15px 100px;
+}
+h5:before,
+h5:after {
+  content: "";
+  flex: 1 1;
+  border-bottom: 1px solid #c5c5c5;
+  margin: 9px;
+}
+
+section.txt-aline {
+  padding: 0px 0 28px 110px;
+}
+input.padding-input {
+  width: 79%;
+  padding: 9px 0px 9px 4px;
+  border: 1px solid #e8e1e1;
+}
+.padding-input{
+  color:grey;
+}
+a.txt-color.aline {
+  padding-left: 55px;
+}
+a.txt-color {
+  color: #a5a3a3;
+}
+
+section.aline-icon {
+  display: flex;
+}
+.btn-password {
+  color: dimgray;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  margin-left: -30px;
+  margin-top: 12px;
+}
+.check-area {
+  display: flex;
+  justify-content: space-around;
+}
+.check-registration {
+  display: flex;
+  justify-content: center;
+}
+.button {
+  background-color: dodgerblue;
+  border: none;
+  color: white;
+  padding: 15px 0px 15px 0px;
+    cursor: pointer;
+    width: 71%;
+}
+section.button-aline {
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+}
+.color{
+  color:dodgerblue;
+}
+span.txt-color {
+  color: #847e7e;
+}
+.color-text {
+  color: #afadad;
+}

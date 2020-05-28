@@ -18,13 +18,13 @@ namespace RegisteredUsers.Presentation.UI.Controllers.API
             this.userService = userService;
         }
 
-      
-        
+
+
         [HttpGet]
         public IActionResult GetUserDetails()
         {
-          
-            try 
+
+            try
             {
                 var result = this.userService.GetUserDetails();
 
@@ -36,6 +36,6 @@ namespace RegisteredUsers.Presentation.UI.Controllers.API
             }
         }
 
-       
+
     }
 }
