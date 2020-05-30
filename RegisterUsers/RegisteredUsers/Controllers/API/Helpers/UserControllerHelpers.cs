@@ -1,5 +1,5 @@
 ﻿using RegisteredUsers.Domain.Entities.Entity;
-using RegisteredUsers.Presentation.UI.ViewModel;
+using RegisteredUsers.Presentation.ViewModel;
 using System.Collections.Generic;
 using System.Linq;
 

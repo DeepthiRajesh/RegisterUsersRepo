@@ -4,8 +4,8 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace RegisteredUsers.Presentation.UI.ViewModel
-{
+namespace RegisteredUsers.Presentation.ViewModel
+{ 
     public class UserViewModel 
     {
         public int Id { get; set; }
@@ -35,7 +35,8 @@ namespace RegisteredUsers.Presentation.UI.ViewModel
         public int BoardInvitationsDeclined { get; set; }
         public int BoardInvitationsRevoked { get; set; }
         public int BoardInvitationsRemoveFromBoard { get; set; }
+        public string Password { get; set; }
 
-
+         
     }
 }

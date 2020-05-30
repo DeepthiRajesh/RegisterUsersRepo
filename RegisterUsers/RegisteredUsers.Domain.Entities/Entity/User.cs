@@ -31,6 +31,8 @@ namespace RegisteredUsers.Domain.Entities.Entity
         public int BoardInvitationsDeclined { get; set; }
         public int BoardInvitationsRevoked { get; set; }
         public int BoardInvitationsRemoveFromBoard { get; set; }
+        public string Password { get; set; }
 
     }
 }
+ 

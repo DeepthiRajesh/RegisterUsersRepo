@@ -6,6 +6,7 @@ namespace RegisteredUsers.Domain.Abstract.Repository.Entity.User
     public interface IUserRepository
     {
         IList<Entities.Entity.User> GetUserDetails();
+        bool IsAuthorise(string email, string password);
     }
 }
  

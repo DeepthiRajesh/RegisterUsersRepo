@@ -28,30 +28,45 @@
           </div>
           <form class=" aline-width">
             <section class="txt-aline">
-              <input type="email" placeholder="Email*" class="padding-input" />
+              <input type="email"
+                     name="email"
+                     [(ngModel)]="email"
+                     placeholder="Email*"
+                     class="padding-input"
+                     id="email" />
             </section>
-              <section class="txt-aline">
-                <input type="password" placeholder="Password*" class="padding-input" />
-                <button type="submit" class="btn-password" id="button">
-                      <i class="fa fa-eye" aria-hidden="true"></i>
-                </button>
-              </section>  
+
+            <section class="txt-aline">
+              <input type="password"
+                     name="password"
+                     [(ngModel)]="password"
+                     placeholder="password*"
+                     class="padding-input"
+                     id="password" />
+              <button type="submit"
+                      class="btn-password"
+                      id="button"
+                      (click)="onSubmit()">
+
+                <i class="fa fa-eye" aria-hidden="true"></i>
+              </button>
+            </section>
             <div class="check-area">
               <section class="color-text  ">
                 <input type="checkbox" class="users-found" /> Remember me
               </section>
-              <section><a class="color"  href="#">Forget password</a></section>
+              <section><a class="color" href="#">Forget password</a></section>
 
             </div>
             <section class="button-aline">
-              <button (click)="registeredUser()" class="button">Login</button>
+              <button (click)="onSubmit()" class="button">Login</button>
             </section>
             <div class="check-registration">
               <section>
                 <a class="color-text">Not a member yet? </a>
               </section>
               <section>
-                <a class="color"  href="#">Register</a>
+                <a class="color" href="#">Register</a>
               </section>
             </div>
           </form>

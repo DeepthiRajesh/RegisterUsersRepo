@@ -4,6 +4,7 @@
 }
 nav.flex.space-between.nav-height {
   box-shadow: 0 0px 8px 0px rgba(0,0,0,0.2);
+  margin: -9px -15px -2px -14px;
 }
 .flex.space-between {
   justify-content: space-between;

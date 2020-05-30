@@ -33,6 +33,7 @@ namespace RegisteredUsers.DataAccess.Sql.Models
         public int BoardInvitationsDeclined { get; set; }
         public int BoardInvitationsRevoked { get; set; }
         public int BoardInvitationsRemoveFromBoard { get; set; }
-         
-    }
+        public string Password { get; set; }
+
+    } 
 }

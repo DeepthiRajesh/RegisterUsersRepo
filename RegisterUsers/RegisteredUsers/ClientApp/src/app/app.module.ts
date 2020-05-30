@@ -11,6 +11,9 @@ import { UserComponent } from './pages/users/user.component';
 import { UserTileComponent } from './component/user-tile/user-tile.component';
 import { ProfileTileComponent } from './component/profile-tile/profile-tile.component';
 import { LoginComponent } from './pages/login/login.component';
+import { AuthGuard } from './guard/auth.guard';
+import { AuthService } from './service/web-request/auth.service';
+
 
 
 @NgModule({
@@ -33,12 +36,12 @@ import { LoginComponent } from './pages/login/login.component';
             { path: 'registration', component: RegistrationComponent },
             { path: 'login', component: LoginComponent },
             { path: 'dashboard', component: DashboardComponent },
-            { path: 'user', component: UserComponent },
+            { path: 'user', component: UserComponent,canActivate:[AuthGuard] },
             { path: 'user-tile', component: UserTileComponent },
             { path: 'profile-tile',component: ProfileTileComponent }
         ])
     ],
-    providers: [],
+    providers: [AuthService,AuthGuard],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

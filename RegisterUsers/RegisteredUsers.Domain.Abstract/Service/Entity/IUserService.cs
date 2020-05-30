@@ -7,5 +7,6 @@ namespace RegisteredUsers.Domain.Abstract.Service.Entity
     public interface IUserService
     {
         IList<User> GetUserDetails();
+        bool IsAuthorise(string email, string password);
     } 
 }

@@ -13,14 +13,7 @@ export class UserService {
     public getUserDetails(): Observable<any> {
       return this.http.get<any>(`https://localhost:44304/api/users`);
     }
-
-    public registration(data: any): Observable<any> {
-        return this.http.post<any>("https://localhost:44304/api/users/registration", data);
-    }
-
-    public login(data: any): Observable<any> {
-        return this.http.post<any>("https://localhost:44304/api/users/login", data);
-    }
+   
     public get(): Observable<AppSettings> {
         return this.http.get<AppSettings>(`https://localhost:44304/api/configuration`);
     }

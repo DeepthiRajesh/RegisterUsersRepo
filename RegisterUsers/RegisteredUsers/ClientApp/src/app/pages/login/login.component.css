@@ -59,9 +59,14 @@ input.padding-input {
   padding: 9px 0px 9px 4px;
   border: 1px solid #e8e1e1;
 }
-.padding-input{
-  color:grey;
-}
+  input.padding-input:focus {
+    box-shadow: 0 0px 14px 0px rgba(15, 12, 247, 0.32);
+    outline: blue;
+  }
+
+  .padding-input {
+    color: grey;
+  }
 a.txt-color.aline {
   padding-left: 55px;
 }
@@ -95,6 +100,9 @@ section.aline-icon {
   padding: 15px 0px 15px 0px;
     cursor: pointer;
     width: 71%;
+}
+.button:focus{
+  outline:blue;
 }
 section.button-aline {
   display: flex;

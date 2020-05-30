@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RegisteredUsers.DataAccess.Sql.Core;
 
 namespace RegisteredUsers.DataAccess.Sql.Migrations
 {
     [DbContext(typeof(RepositoryDetailContexts))]
-    partial class RepositoryDetailContextsModelSnapshot : ModelSnapshot
+    [Migration("20200529051131_SeedNewData")]
+    partial class SeedNewData
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

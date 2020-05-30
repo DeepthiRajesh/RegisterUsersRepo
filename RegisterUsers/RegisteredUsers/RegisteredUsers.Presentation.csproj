@@ -41,6 +41,7 @@
   <ItemGroup>
     <Folder Include="ClientApp\src\app\component\" />
     <Folder Include="ClientApp\src\app\models\common\" />
+    <Folder Include="ClientApp\src\app\guard\" />
     <Folder Include="ClientApp\src\app\service\data\" />
     <Folder Include="Controllers\Helpers\" />
   </ItemGroup>

@@ -32,24 +32,24 @@ export class RegistrationComponent implements OnInit {
         return true;
     }
 
-    public submit(): void {
-        if (!this.isValidateCredential()) {
-            return;
-        }
-        this.userService.registration(this.registration).subscribe((
-            response: HttpResponse<any>) => {
-            if (response) {
-                this.router.navigateByUrl('login');
-                alert('Registration success');
-            }
-            else {
-                alert('Registration Failed');
-                (error: HttpErrorResponse) => {
-                    console.log(error);
+    //public submit(): void {
+    //    if (!this.isValidateCredential()) {
+    //        return;
+    //    }
+    //    this.userService.registration(this.registration).subscribe((
+    //        response: HttpResponse<any>) => {
+    //        if (response) {
+    //            this.router.navigateByUrl('login');
+    //            alert('Registration success');
+    //        }
+    //        else {
+    //            alert('Registration Failed');
+    //            (error: HttpErrorResponse) => {
+    //                console.log(error);
 
-                }
-            }
-        });
-    }
+    //            }
+    //        }
+    //    });
+    //}
 }
 

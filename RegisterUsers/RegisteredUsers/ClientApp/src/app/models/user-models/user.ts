@@ -1,7 +1,7 @@
 export class User {
     id: number;
     firstName: string;
-    middleName: string ;
+    middleName: string;
     lastName: string;
     author: string;
     articleType: string;
@@ -26,6 +26,5 @@ export class User {
     boardInvitationsDecline: number;
     boardInvitationsRevoke: number;
     boardInvitationsRemoveFromBoard: number;
-
-    
+    password: string;
 }

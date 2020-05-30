@@ -20,31 +20,32 @@ namespace RegisteredUsers.DataAccess.Sql.Core
                 {
                     Id = 1,
                     FirstName = "Deepthi",
-                    MiddleName = "Rajesk",
+                    MiddleName = "Rajesh",
                     LastName = "Kuzhikkattil",
                     Author = "TES International (United States)",
                     ArticleType = "Author",
-                    RegistrationDate = "28/04/2020",
+                    RegistrationDate = "06/11/2019",
                     EditingAssignments = 0,
                     ReviewAssignments = 0,
                     Submission = 1,
                     Place = "Troy, United States",
-                    Email = "automationuser081320@vialoopregistration.com",
-                    EditingAssignmentsCurrent = 0,
+                    Email = "deepthir9597@gmail.com",
+                    EditingAssignmentsCurrent = 1,
                     EditingAssignmentsCompleted = 1,
-                    ReviewAssignmentsCurrent = 0,
+                    ReviewAssignmentsCurrent = 1,
                     ReviewAssignmentsEndosed = 1,
                     ReviewAssignmentsRejected = 0,
-                    SubmissionInReview = 1,
+                    SubmissionInReview = 0,
                     SubmissionInitialValidation = 0,
                     SubmissionAccepted = 0,
-                    SubmissionRejected = 1,
+                    SubmissionRejected = 0,
                     BoardInvitations = 1,
                     BoardInvitationsPending = 0,
                     BoardInvitationsAccepted = 1,
                     BoardInvitationsDeclined = 0,
                     BoardInvitationsRevoked = 1,
-                    BoardInvitationsRemoveFromBoard = 0
+                    BoardInvitationsRemoveFromBoard = 0,
+                    Password = "deepthi97"
                 },
                 new User
                 {
@@ -59,7 +60,7 @@ namespace RegisteredUsers.DataAccess.Sql.Core
                     ReviewAssignments = 0,
                     Submission = 1,
                     Place = "Troy, United States",
-                    Email = "automationuser081320@vialoopregistration.com",
+                    Email = "sandheepsanthosh@gmail.com",
                     EditingAssignmentsCurrent = 0,
                     EditingAssignmentsCompleted = 1,
                     ReviewAssignmentsCurrent = 0,
@@ -74,7 +75,8 @@ namespace RegisteredUsers.DataAccess.Sql.Core
                     BoardInvitationsAccepted = 1,
                     BoardInvitationsDeclined = 0,
                     BoardInvitationsRevoked = 1,
-                    BoardInvitationsRemoveFromBoard = 0
+                    BoardInvitationsRemoveFromBoard = 0,
+                    Password = "sandheep95"
                 },
                 new User
                 {
@@ -89,7 +91,7 @@ namespace RegisteredUsers.DataAccess.Sql.Core
                     ReviewAssignments = 0,
                     Submission = 1,
                     Place = "Troy, United States",
-                    Email = "automationuser081320@vialoopregistration.com",
+                    Email = "keerthana95@gmail.com",
                     EditingAssignmentsCurrent = 0,
                     EditingAssignmentsCompleted = 1,
                     ReviewAssignmentsCurrent = 0,
@@ -104,7 +106,8 @@ namespace RegisteredUsers.DataAccess.Sql.Core
                     BoardInvitationsAccepted = 1,
                     BoardInvitationsDeclined = 0,
                     BoardInvitationsRevoked = 1,
-                    BoardInvitationsRemoveFromBoard = 0
+                    BoardInvitationsRemoveFromBoard = 0,
+                    Password = "keerthana97"
                 },
                 new User
                 {
@@ -113,13 +116,13 @@ namespace RegisteredUsers.DataAccess.Sql.Core
                     MiddleName = "Kannan",
                     LastName = "",
                     Author = "TES International (United States)",
-                    ArticleType = "Author",
-                    RegistrationDate = "28/04/2020",
+                    ArticleType = "Associate Editor",
+                    RegistrationDate = "28/04/2010",
                     EditingAssignments = 0,
                     ReviewAssignments = 0,
                     Submission = 1,
                     Place = "Troy, United States",
-                    Email = "automationuser081320@vialoopregistration.com",
+                    Email = "malukannan95@gmail.com",
                     EditingAssignmentsCurrent = 0,
                     EditingAssignmentsCompleted = 1,
                     ReviewAssignmentsCurrent = 0,
@@ -127,14 +130,15 @@ namespace RegisteredUsers.DataAccess.Sql.Core
                     ReviewAssignmentsRejected = 0,
                     SubmissionInReview = 1,
                     SubmissionInitialValidation = 0,
-                    SubmissionAccepted = 0,
+                    SubmissionAccepted = 1,
                     SubmissionRejected = 1,
-                    BoardInvitations = 1,
-                    BoardInvitationsPending = 0,
+                    BoardInvitations = 0,
+                    BoardInvitationsPending = 1,
                     BoardInvitationsAccepted = 1,
                     BoardInvitationsDeclined = 0,
                     BoardInvitationsRevoked = 1,
-                    BoardInvitationsRemoveFromBoard = 0
+                    BoardInvitationsRemoveFromBoard = 0,
+                    Password = "malu97"
                 },
                 new User
                 {
@@ -144,12 +148,12 @@ namespace RegisteredUsers.DataAccess.Sql.Core
                     LastName = "Kuzhikkattil",
                     Author = "TES International (United States)",
                     ArticleType = "Author",
-                    RegistrationDate = "28/04/2020",
+                    RegistrationDate = "18/09/2018",
                     EditingAssignments = 0,
                     ReviewAssignments = 0,
                     Submission = 1,
                     Place = "Troy, United States",
-                    Email = "automationuser081320@vialoopregistration.com",
+                    Email = "divyarajesh0397@outlook.com",
                     EditingAssignmentsCurrent = 0,
                     EditingAssignmentsCompleted = 1,
                     ReviewAssignmentsCurrent = 0,
@@ -159,12 +163,13 @@ namespace RegisteredUsers.DataAccess.Sql.Core
                     SubmissionInitialValidation = 0,
                     SubmissionAccepted = 0,
                     SubmissionRejected = 1,
-                    BoardInvitations = 1,
+                    BoardInvitations = 0,
                     BoardInvitationsPending = 0,
-                    BoardInvitationsAccepted = 1,
-                    BoardInvitationsDeclined = 0,
+                    BoardInvitationsAccepted = 0,
+                    BoardInvitationsDeclined = 1,
                     BoardInvitationsRevoked = 1,
-                    BoardInvitationsRemoveFromBoard = 0
+                    BoardInvitationsRemoveFromBoard = 0,
+                    Password = "divya97"
                 }
             ) ;
         }

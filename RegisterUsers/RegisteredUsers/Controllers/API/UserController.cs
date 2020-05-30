@@ -1,11 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using RegisteredUsers.Domain.Abstract.Service.Entity;
 using RegisteredUsers.Presentation.UI.Controllers.API.Helpers;
-using RegisteredUsers.Presentation.UI.ViewModel;
+using RegisteredUsers.Presentation.ViewModel;
 using System;
 using System.Net;
 
-namespace RegisteredUsers.Presentation.UI.Controllers.API
+namespace RegisteredUsers.Presentation.Controllers.API
 {
     [Route("api/users")]
     [ApiController]

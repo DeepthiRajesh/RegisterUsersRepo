@@ -19,5 +19,9 @@ namespace RegisteredUsers.Domain.Service.Entity
             return this.userRepository.GetUserDetails();  
         }
 
+        public bool IsAuthorise(string email, string password)
+        {
+            return this.userRepository.IsAuthorise(email, password);
+        }
     }
 }
