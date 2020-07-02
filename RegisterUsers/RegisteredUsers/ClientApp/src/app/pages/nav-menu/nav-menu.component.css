@@ -43,3 +43,58 @@ select.more {
 .nav-adjust {
   align-self: center;
 }
+/*profile drop down*/
+
+/*.profile-wrapper {
+  width: 270px;
+  height: 186px;
+  border: 1px solid #bababa;
+  z-index: 1;
+  float: right;
+  background: white;
+  display: none;
+}
+
+.check-btn {
+  display: none;
+}
+
+#profile-pic-check:checked + .profile-wrapper {
+  display: block;
+}
+
+
+.user-name {
+  font-weight: 700;
+}
+
+.email {
+  font-size: 13px;
+}
+
+.header-wrapper {
+  border-bottom: 1px solid #e0e0e0;
+  padding: 5px;
+}
+
+ul.ibar-user-level {
+  cursor: pointer;
+  display: block;
+  padding: 0px;
+  font-size: 13px;
+  list-style-type: none;
+  align-self: auto;
+}
+
+.ibar-user-level > li {
+  padding: 5px;
+}
+
+  .ibar-user-level > li:hover {
+    background: #f2f0f0;
+  }*/
+
+
+
+
+

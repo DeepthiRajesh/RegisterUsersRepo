@@ -9,7 +9,7 @@ using RegisteredUsers.DataAccess.Sql.Core;
 
 namespace RegisteredUsers.DataAccess.Sql.Migrations
 {
-    [DbContext(typeof(RepositoryDetailContexts))]
+    [DbContext(typeof(RegisteredUserContexts))]
     [Migration("20200526121347_migrationRepo")]
     partial class migrationRepo
     {

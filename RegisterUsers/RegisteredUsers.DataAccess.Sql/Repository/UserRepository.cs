@@ -9,9 +9,9 @@ namespace RegisteredUsers.DataAccess.Sql.Core
 {
     public class UserRepository : IUserRepository
     {
-         private readonly RepositoryDetailContexts userDbContext;
+         private readonly RegisteredUserContexts userDbContext;
 
-        public UserRepository(RepositoryDetailContexts userDbContext)
+        public UserRepository(RegisteredUserContexts userDbContext)
         {
             this.userDbContext = userDbContext;
         }     

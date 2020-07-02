@@ -57,7 +57,7 @@
 
       </div>
       <!--usertile area-->
-      <app-user-tile *ngFor="let users of userTile" [users]="userTile"
+      <app-user-tile  [users]="userTile"
                      (userDetails)="profileViewDetails($event)"></app-user-tile>
     </div>
 

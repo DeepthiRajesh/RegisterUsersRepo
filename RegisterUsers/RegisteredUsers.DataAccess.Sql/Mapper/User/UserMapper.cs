@@ -8,7 +8,7 @@ namespace RegisteredUsers.DataAccess.Sql.Mapper.User
 {
     public static class UserMapper
     {
-        public static Domain.Entities.Entity.User ToDomain(Models.User user)
+        public static Domain.Entities.Entity.User ToDomain(this Models.User user)
         {
             return new Domain.Entities.Entity.User
             {
@@ -40,13 +40,15 @@ namespace RegisteredUsers.DataAccess.Sql.Mapper.User
                 BoardInvitationsDeclined = user.BoardInvitationsDeclined,
                 BoardInvitationsRevoked = user.BoardInvitationsRevoked,
                 BoardInvitationsRemoveFromBoard = user.BoardInvitationsRemoveFromBoard
+                
 
             };
         }
 
-        public static IList<Domain.Entities.Entity.User> ToDomain(IList<Models.User> user)
+        public static IList<Domain.Entities.Entity.User> ToDomain( this IList<Models.User> user)
         {
             return user.Select(x => ToDomain(x)).ToList();
+
         }
     }
 }

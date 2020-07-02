@@ -9,38 +9,46 @@ namespace RegisteredUsers.DataAccess.Mongo.Helpers
 {
     public static class UserDocumentRepositoryHelper
     {
-
-        /*public static IList<UserDocument> ToUserDocument(this IList<UserDocumentMdo> documentMdos)
+        public static Users ToUserDocument(this User documentMdo)
         {
-            return documentMdos.IsNullOrEmpty() ? null : documentMdos.Select(x => x.ToUserDocument()).ToList();
-        }
-
-        public static UserDocument ToUserDocument(this UserDocumentMdo documentMdo)
-        {
-            return documentMdo != null ? new UserDocument
+            return documentMdo != null ? new Users 
             {
-                BirthDate = documentMdo.BirthDate,
-                FirstName = documentMdo.FirstName,
-                LastName = documentMdo.LastName,
-                MiddleName = documentMdo.MiddleName,
-                PhoneNumber = documentMdo.PhoneNumber,
-                UserId = documentMdo.UserId
-            } : null;
-        }*/
 
-        public static UserDetailDocument ToUserDocument(this UserDocumentMdo documentMdo)
-        {
-            return documentMdo != null ? new UserDetailDocument
-            {
-                BirthDate = documentMdo.BirthDate,
+                Id = documentMdo.Id,
                 FirstName = documentMdo.FirstName,
-                LastName = documentMdo.LastName,
                 MiddleName = documentMdo.MiddleName,
-                PhoneNumber = documentMdo.PhoneNumber,
-                UserId = documentMdo.UserId,
-                
+                LastName = documentMdo.LastName,
+                Author = documentMdo.Author,
+                ArticleType = documentMdo.ArticleType,
+                RegistrationDate = documentMdo.RegistrationDate,
+                EditingAssignments = documentMdo.EditingAssignments,
+                ReviewAssignments = documentMdo.ReviewAssignments,
+                Submission = documentMdo.Submission,
+                Place = documentMdo.Place,
+                Email = documentMdo.Email,
+                EditingAssignmentsCurrent = documentMdo.EditingAssignmentsCurrent,
+                EditingAssignmentsCompleted = documentMdo.EditingAssignmentsCompleted,
+                ReviewAssignmentsCurrent = documentMdo.ReviewAssignmentsCurrent,
+                ReviewAssignmentsEndosed = documentMdo.ReviewAssignmentsEndosed,
+                ReviewAssignmentsRejected = documentMdo.ReviewAssignmentsRejected,
+                SubmissionInReview = documentMdo.SubmissionInReview,
+                SubmissionInitialValidation = documentMdo.SubmissionInitialValidation,
+                SubmissionAccepted = documentMdo.SubmissionAccepted,
+                SubmissionRejected = documentMdo.SubmissionRejected,
+                BoardInvitations = documentMdo.BoardInvitations,
+                BoardInvitationsPending = documentMdo.BoardInvitationsPending,
+                BoardInvitationsAccepted = documentMdo.BoardInvitationsAccepted,
+                BoardInvitationsDeclined = documentMdo.BoardInvitationsDeclined,
+                BoardInvitationsRevoked = documentMdo.BoardInvitationsRevoked,
+                BoardInvitationsRemoveFromBoard = documentMdo.BoardInvitationsRemoveFromBoard,
+
+
             } : null;
         }
+        public static IList<Users> ToUserDocument(this IList<User> user)
+        {
+            return user.Select(x => ToUserDocument(x)).ToList();
 
+        }
     }
 }

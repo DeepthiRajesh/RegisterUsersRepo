@@ -1,8 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using RegisteredUsers.Domain.Abstract.Service.Entity;
+﻿using Hangfire;
+using Microsoft.AspNetCore.Mvc;
 using RegisteredUsers.Presentation.UI.Controllers.API.Helpers;
 using RegisteredUsers.Presentation.ViewModel;
 using System;
+using System.Collections.Generic;
 using System.Net;
 
 namespace RegisteredUsers.Presentation.Controllers.API
@@ -11,13 +12,15 @@ namespace RegisteredUsers.Presentation.Controllers.API
     [ApiController]
     public class UserController : ControllerBase
     {
-        private readonly IUserService userService;
+        private readonly Domain.Abstract.Service.Entity.IUserService userService;
+        private readonly Domain.Abstract.Service.Document.IUserService userDocumentService;
 
-        public UserController(IUserService userService)
+        public UserController(Domain.Abstract.Service.Entity.IUserService userService,
+                                Domain.Abstract.Service.Document.IUserService userDocumentService)
         {
             this.userService = userService;
+            this.userDocumentService = userDocumentService;
         }
-
 
 
         [HttpGet]
@@ -27,15 +30,35 @@ namespace RegisteredUsers.Presentation.Controllers.API
             try
             {
                 var result = this.userService.GetUserDetails();
-
-                return Ok(result.ToUserDetailViewModel());
+                foreach (var item in result)
+                  {
+                   BackgroundJob.Enqueue(() => this.userDocumentService.Replicate(item.ToUserDocumentFromEntity()));
+                  }
+                    return Ok(result.ToUserDetailViewModel());
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                throw new ArgumentNullException(ex.Message);
+                throw;
             }
         }
+        //[HttpPost]
+        //public void Replicate()
+        //{
+        //    try
+        //    {
+        //        var result = this.userService.GetUserDetails();
+        //        foreach (var item in result)
+        //        {
+        //            BackgroundJob.Enqueue(() => this.userDocumentService.Replicate(item.ToUserDocumentFromEntity()));
+        //        }
+        //    }
+        //    catch (Exception)
+        //    {
+        //        throw;
+        //    }
 
+
+        //}
 
     }
 }

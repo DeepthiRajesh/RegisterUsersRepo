@@ -14,7 +14,7 @@ namespace RegisteredUsers.DataAccess.Mongo.Core
             collection = client.GetDatabase(options.Value.Database);
         }
 
-        public IMongoCollection<UserDocumentMdo> UserDocumentCollection => collection.GetCollection<UserDocumentMdo>("users");
+        public IMongoCollection<Users> UserDocumentCollection => collection.GetCollection<Users>("users");
 
         //public IMongoCollection<PersonalDetailDocumentMdo> PersonalDetailsDocumentCollection => collection.GetCollection<PersonalDetailDocumentMdo>("personal-details");
     }

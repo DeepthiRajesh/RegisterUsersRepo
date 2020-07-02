@@ -30,6 +30,7 @@ button.btn-nav {
   color: #d54449;
   border: none;
   cursor: pointer;
+  margin:2px;
 }
 .option-color {
   background-color: white;
@@ -94,6 +95,10 @@ strong.role {
 .profile-footer {
   display:flex;
 }
+span.tot-number {
+  padding: 5px;
+}
+
 .profile-footer-area {
   background-color: #f7f6f6;
 }

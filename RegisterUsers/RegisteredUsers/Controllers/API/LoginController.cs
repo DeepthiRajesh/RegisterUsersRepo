@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using RegisteredUsers.Domain.Abstract.Service.Entity;
@@ -26,10 +27,13 @@ namespace RegisteredUsers.Presentation.Controllers.API
             var result = this.userService.IsAuthorise(userModel.Email, userModel.Password);
             return Ok(result);
             }
-            catch(Exception ex)
+            catch(Exception)
             {
-                throw new ArgumentNullException(ex.Message);
+                throw;
             }
         }
+        
     }
+
+
 }

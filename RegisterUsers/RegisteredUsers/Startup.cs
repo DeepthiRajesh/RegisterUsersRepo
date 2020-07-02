@@ -1,3 +1,5 @@
+using Hangfire;
+using Hangfire.SqlServer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
@@ -6,6 +8,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using RegisteredUsers.Infrastructure.Dependency;
 using RegisteredUsers.Presentation;
+using System;
 
 namespace RegisteredUsers
 {
@@ -24,6 +27,7 @@ namespace RegisteredUsers
             services.Configure<AppSettings>(this.Configuration);
 
             services.BindDependency(Configuration);
+            services.BindUserApiDependency(Configuration);
 
             services.AddControllersWithViews();
             // In production, the Angular files will be served from this directory
@@ -31,10 +35,23 @@ namespace RegisteredUsers
             {
                 configuration.RootPath = "ClientApp/dist";
             });
+            services.AddHangfire(configuration => configuration
+           .SetDataCompatibilityLevel(CompatibilityLevel.Version_170)
+           .UseSimpleAssemblyNameTypeSerializer()
+           .UseRecommendedSerializerSettings()
+           .UseSqlServerStorage(Configuration.GetConnectionString("HangfireConnection"), new SqlServerStorageOptions
+           {
+               CommandBatchMaxTimeout = TimeSpan.FromMinutes(5),
+               SlidingInvisibilityTimeout = TimeSpan.FromMinutes(5),
+               QueuePollInterval = TimeSpan.Zero,
+               UseRecommendedIsolationLevel = true,
+               DisableGlobalLocks = true
+           }));
+            services.AddHangfireServer();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IBackgroundJobClient backgroundJobs, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
@@ -49,6 +66,8 @@ namespace RegisteredUsers
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+            app.UseHangfireDashboard();
+
             if (!env.IsDevelopment())
             {
                 app.UseSpaStaticFiles();

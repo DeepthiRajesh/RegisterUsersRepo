@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../../models/user-models/user';
 import { UserService } from '../../service/web-request/user.service';
+import { Profile } from 'selenium-webdriver/firefox';
 
 @Component({
     selector: 'app-user',
@@ -10,6 +11,7 @@ import { UserService } from '../../service/web-request/user.service';
 export class UserComponent implements OnInit {
     public userTileData = new User();
     userTile: Array<User> = new Array<User>();
+    tileData: Profile;
     constructor(private userService : UserService) {
 
     }
@@ -21,13 +23,13 @@ export class UserComponent implements OnInit {
 
     public getUserData(): any {
         this.userService.getUserDetails()
-            .subscribe(datas => {
-                this.userTile = datas.map(x => Object.assign({},x));
-               
+            .subscribe(datas => {               
+                this.userTile = datas.map(x => Object.assign({}, x));
+                this.userTileData = this.userTile.find(x => x.id == 1);
             }, error => console.error(error));
     }
     
     profileViewDetails(user: any) {
-        this.userTileData = Object.assign({}, user);
+        this.userTileData = Object.assign({}, user); 
     }
 }

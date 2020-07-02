@@ -1,6 +1,7 @@
 ﻿using RegisteredUsers.Domain.Abstract.Repository.Document;
 using RegisteredUsers.Domain.Abstract.Service.Document;
 using RegisteredUsers.Domain.Entities.Document;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace RegisteredUsers.Domain.Service.Document
@@ -14,14 +15,9 @@ namespace RegisteredUsers.Domain.Service.Document
             this.userRepository = userRepository;
         }
 
-        public async Task<UserDetailDocument> GetUserDetailsById(int userId)
+        public void Replicate(Domain.Entities.Document.User user)
         {
-            return await this.userRepository.GetUserDetailsByIdAsync(userId);
-        }
-
-        public async Task<bool> Replicate(UserDetailDocument user)
-        {
-            return await this.userRepository.Replicate(user);
+              this.userRepository.Replicate(user);
         }
 
     }

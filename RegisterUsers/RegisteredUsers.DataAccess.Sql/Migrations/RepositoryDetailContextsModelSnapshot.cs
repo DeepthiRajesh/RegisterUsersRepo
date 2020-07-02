@@ -7,7 +7,7 @@ using RegisteredUsers.DataAccess.Sql.Core;
 
 namespace RegisteredUsers.DataAccess.Sql.Migrations
 {
-    [DbContext(typeof(RepositoryDetailContexts))]
+    [DbContext(typeof(RegisteredUserContexts))]
     partial class RepositoryDetailContextsModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

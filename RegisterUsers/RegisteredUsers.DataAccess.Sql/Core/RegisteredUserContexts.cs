@@ -3,9 +3,9 @@ using RegisteredUsers.DataAccess.Sql.Models;
 
 namespace RegisteredUsers.DataAccess.Sql.Core
 {
-    public class RepositoryDetailContexts : DbContext
+    public class RegisteredUserContexts : DbContext
     {
-        public RepositoryDetailContexts(DbContextOptions<RepositoryDetailContexts> options) : base(options)
+        public RegisteredUserContexts(DbContextOptions<RegisteredUserContexts> options) : base(options)
         {
 
         }

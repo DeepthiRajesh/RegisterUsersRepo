@@ -9,7 +9,7 @@ namespace RegisteredUsers.Infrastructure.Dependency
     {
         public static void BindDependency(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddDbContext<DataAccess.Sql.Core.RepositoryDetailContexts>(options => options.UseSqlServer(configuration["ConnectionString:Registraion"]));
+            services.AddDbContext<DataAccess.Sql.Core.RegisteredUserContexts>(options => options.UseSqlServer(configuration["ConnectionString:Registraion"]));
             services.AddScoped<Domain.Abstract.Repository.Entity.User.IUserRepository, RegisteredUsers.DataAccess.Sql.Core.UserRepository>();
             services.AddScoped<RegisteredUsers.Domain.Abstract.Service.Entity.IUserService, RegisteredUsers.Domain.Service.Entity.UserService>();
         }

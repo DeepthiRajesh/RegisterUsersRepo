@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../../service/web-request/user.service';
 import { AppSettings } from '../../models/header/appsettings';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-nav-menu',
@@ -10,7 +11,7 @@ import { AppSettings } from '../../models/header/appsettings';
 export class NavMenuComponent implements OnInit {
 
     public appSettings;
-    constructor(private userService: UserService) {
+    constructor(private userService: UserService, private router: Router) {
         this.appSettings = new AppSettings();
     }
 
@@ -31,7 +32,9 @@ export class NavMenuComponent implements OnInit {
     public getHeaderData() {
         this.userService.get()
             .subscribe(datas =>
-                this.appSettings  = datas);
+                this.appSettings = datas);
         console.log(this.appSettings);
     }
+
+    
 }
