@@ -2,6 +2,7 @@
 using RegisteredUsers.Domain.Abstract.Service.Entity;
 using RegisteredUsers.Domain.Entities.Entity;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace RegisteredUsers.Domain.Service.Entity
 {
@@ -13,7 +14,7 @@ namespace RegisteredUsers.Domain.Service.Entity
         {
             this.userRepository = userRepository;
         }
-        
+
         public IList<User> GetUserDetails()
         {
             return this.userRepository.GetUserDetails();  
@@ -23,5 +24,11 @@ namespace RegisteredUsers.Domain.Service.Entity
         {
             return this.userRepository.IsAuthorise(email, password);
         }
+        public User GetUserDetailsById(int userId)
+        {
+            return this.userRepository.GetUserDetailsById(userId);
+        }
+
+
     }
 }

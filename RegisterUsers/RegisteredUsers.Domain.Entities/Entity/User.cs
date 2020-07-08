@@ -32,7 +32,7 @@ namespace RegisteredUsers.Domain.Entities.Entity
         public int BoardInvitationsRevoked { get; set; }
         public int BoardInvitationsRemoveFromBoard { get; set; }
         public string Password { get; set; }
-
+        public object Content { get; set; }
     }
 }
  

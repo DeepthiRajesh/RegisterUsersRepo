@@ -8,5 +8,6 @@ namespace RegisteredUsers.Domain.Abstract.Service.Entity
     {
         IList<User> GetUserDetails();
         bool IsAuthorise(string email, string password);
+        User GetUserDetailsById(int userId);
     } 
 }

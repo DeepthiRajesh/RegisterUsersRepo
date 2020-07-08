@@ -41,24 +41,44 @@ namespace RegisteredUsers.Presentation.Controllers.API
                 throw;
             }
         }
-        //[HttpPost]
-        //public void Replicate()
-        //{
-        //    try
-        //    {
-        //        var result = this.userService.GetUserDetails();
-        //        foreach (var item in result)
-        //        {
-        //            BackgroundJob.Enqueue(() => this.userDocumentService.Replicate(item.ToUserDocumentFromEntity()));
-        //        }
-        //    }
-        //    catch (Exception)
-        //    {
-        //        throw;
-        //    }
 
 
-        //}
+        [HttpPost("replicate")]
+        public void Replicate()
+        {
+            try
+            {
+                var result = this.userService.GetUserDetails();
+                foreach (var item in result)
+                {
+                    BackgroundJob.Enqueue(() => this.userDocumentService.Replicate(item.ToUserDocumentFromEntity()));
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
 
+
+        }
+
+
+        [HttpGet("replicate({userId})")]
+        public IActionResult GetUserDetailsById([FromRoute] int userId)
+        {
+            try
+            {
+                var result = this.userService.GetUserDetailsById(userId); 
+                BackgroundJob.Enqueue(() => this.userDocumentService.Replicate(result.ToUserDocumentFromEntity()));
+                return Ok(result.ToUserDetailViewModel());
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+
+        }
+       
     }
 }

@@ -25,6 +25,7 @@ namespace RegisteredUsers.Presentation.Controllers.API
             try
             {
             var result = this.userService.IsAuthorise(userModel.Email, userModel.Password);
+
             return Ok(result);
             }
             catch(Exception)

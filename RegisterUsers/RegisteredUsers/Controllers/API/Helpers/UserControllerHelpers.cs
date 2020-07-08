@@ -65,7 +65,7 @@ namespace RegisteredUsers.Presentation.UI.Controllers.API.Helpers
                 EditingAssignmentsCompleted = userModel.EditingAssignmentsCompleted,
                 ReviewAssignmentsCurrent = userModel.ReviewAssignmentsCurrent,
                 ReviewAssignmentsEndosed = userModel.ReviewAssignmentsEndosed,
-                ReviewAssignmentsRejected = userModel.ReviewAssignmentsRejected,
+                ReviewAssignmentsRejected = userModel.ReviewAssignmentsRejected, 
                 SubmissionInReview = userModel.SubmissionInReview,
                 SubmissionInitialValidation = userModel.SubmissionInitialValidation,
                 SubmissionAccepted = userModel.SubmissionAccepted,
